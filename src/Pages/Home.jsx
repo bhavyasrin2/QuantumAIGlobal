@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from '../Components/Header';
 import Footer from "../Components/Footer"
 import { generateSvgDataUrl } from "../Components/Dimensions";
+import { Corousel } from '../Components/HorizontalCorousel';
 
 
 
@@ -38,7 +39,9 @@ export default function Home() {
 
       <Header id={1} />
 
-     
+     <div className='w-full width flex items-center justify-center'>
+      <Corousel/>
+      </div>
         <Footer showpage={true} /> 
       </div>
     

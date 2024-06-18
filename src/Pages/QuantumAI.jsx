@@ -42,13 +42,13 @@ export default function QuantumAI() {
 
       <Header id={3} />
 
-      <div className='w-full md:h-[30rem] '>
+      <div className='w-full h-[24rem] md:h-[30rem] '>
 
         <HeroSection title1="Explore Quantum AI's"
           title2="Cutting-Edge Products" content="Quantum AI Global, we value your input, inquiries, and feedback. Our mission is to foster collaboration and innovation, and your communication plays a vital role in achieving that. Whether you have questions about our cutting-edge quantum technologies, want to explore partnership opportunities, or simply want to get in touch, we're here to listen." />
       </div>
       <div className="w-full  flex flex-col items-center justify-center gap-6 ">
-        <div className="w-full flex flex-col items-center justify-center ">
+        <div className="w-full hidden md:block">
 
           <Productspicture />
         </div>

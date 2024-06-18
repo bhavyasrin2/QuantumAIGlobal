@@ -41,62 +41,62 @@ export default function Form() {
 
     return (
         <div className="2xl:w-[70%] md:w-[50%] max-w-5xl mx-auto flex md:flex-row flex-col md:gap-0 gap-8 items-center justify-center px-10 py-2">
-            <div className="w-full px-10 py-10 bg-[#000000] rounded-xl flex flex-col justify-center items-center gap-4">
+            <div className="w-full px-3 py-5 md:px-10 md:py-10 bg-[#000000] rounded-xl flex flex-col justify-center items-center gap-4">
                 <div>
-                    <h2 className="w-full text-3xl 2xl:text-4xl font-RobotoBold mb-1 wordGradient text-center">
+                    <h2 className="w-full text-[1.25rem] md:text-[2.3rem] font-RobotoBold mb-1 wordGradient text-center">
                         Contact Quantum AI Global
                     </h2>
-                    <div className='font-RobotoMedium w-full text-[#28ABE3] text-sm 2xl:text-lg mb-1 text-center'>
+                    <div className='w-[90%] md:w-full font-RobotoMedium  text-[#28ABE3] md:text-sm text-xs  mb-1 text-center'>
                         We’re available to quickly answer any questions you might have.
                     </div>
                 </div>
                 <form ref={form} onSubmit={sendEmail}>
-                    <div className="w-full md:mb-4 mb-1 flex text-sm items-center justify-center gap-2">
-                        <div className='w-[50%] buttonclass'>
+                    <div className="w-full md:mb-4 mb-1 flex md:flex-row flex-col text-sm items-center justify-center gap-2">
+                        <div className='w-full md:w-[50%] buttonclass'>
                             <input
                                 type="text"
                                 id="firstname"
                                 name="first_name"
                                 placeholder='First Name'
-                                className="md:p-3 w-full font-RobotoRegular text-[#ffffff] rounded-xl bg-[#000000]"
+                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
                             />
                         </div>
-                        <div className='w-[50%] buttonclass'>
+                        <div className='w-full md:w-[50%] buttonclass'>
                             <input
                                 type="text"
                                 id="lastname"
                                 name="last_name"
                                 placeholder='Last Name'
-                                className="md:p-3 w-full font-RobotoRegular text-[#ffffff] rounded-xl bg-[#000000]"
+                                className=" px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                             />
                         </div>
                     </div>
-                    <div className="w-full md:mb-4 mb-1 flex text-sm items-center justify-center gap-2">
-                        <div className='w-[50%] buttonclass'>
+                    <div className="w-full md:mb-4 mb-1 flex md:flex-row flex-col text-sm items-center justify-center gap-2">
+                        <div className='w-full md:w-[50%] buttonclass'>
                             <input
                                 type="email"
                                 id="email"
                                 name="user_email"
                                 placeholder='Email'
-                                className="md:p-3 w-full font-RobotoRegular text-[#ffffff] rounded-xl bg-[#000000]"
+                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
-                        <div className='w-[50%] buttonclass'>
+                        <div className='w-full md:w-[50%] buttonclass'>
                             <input
                                 type="tel"
                                 id="phoneNumber"
                                 name="user_phoneNumber"
                                 placeholder='Phone number'
-                                className="md:p-3 w-full font-RobotoRegular text-[#ffffff] rounded-xl bg-[#000000]"
+                                className=" px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={phoneNumber}
                                 onChange={(e) => setPhoneNumber(e.target.value)}
@@ -110,7 +110,7 @@ export default function Form() {
                                 id="subject"
                                 name="user_subject"
                                 placeholder='Subject'
-                                className="md:p-3 w-full font-RobotoRegular text-[#ffffff] rounded-xl bg-[#000000]"
+                                className=" px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
@@ -123,7 +123,7 @@ export default function Form() {
                             name="user_message"
                             placeholder='Type your Message'
                             rows="4"
-                            className="md:p-3 w-full font-RobotoRegular text-[#ffffff] rounded-xl bg-[#000000]"
+                            className=" px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                             required
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
@@ -136,7 +136,7 @@ export default function Form() {
                             checked={agreedToCommunications}
                             onChange={(e) => setAgreedToCommunications(e.target.checked)}
                         />
-                        <label className='font-RobotoRegular text-[#ffffff] text-sm' htmlFor="agreedToCommunications">
+                        <label className='font-RobotoRegular text-[#ffffff] md:text-sm text-xs' htmlFor="agreedToCommunications">
                             I agree to receive other communications from Quantum AI Global.
                         </label>
                     </div>
@@ -147,11 +147,11 @@ export default function Form() {
                             checked={agreedToTerms}
                             onChange={(e) => setAgreedToTerms(e.target.checked)}
                         />
-                        <label className='font-RobotoRegular text-[#ffffff] text-sm' htmlFor="agreedToTerms">
+                        <label className='font-RobotoRegular text-[#ffffff] md:text-sm text-xs ' htmlFor="agreedToTerms">
                             I accept the Terms of Use and privacy policy*
                         </label>
                     </div>
-                    <div className='font-RobotoRegular text-[#ffffff] text-justify text-sm my-2'>
+                    <div className='font-RobotoRegular text-[#ffffff] text-justify md:text-sm text-xs my-2'>
                         By clicking submit below, you consent to allow Quantum Computing Inc. to store and process the personal information submitted above to provide you the content requested.
                     </div>
                     <div className="flex justify-center text-center">
@@ -159,7 +159,7 @@ export default function Form() {
                             containerClassName="rounded-full"
                             as="button"
                             type="submit"
-                            className="bg-black font-RobotoMedium text-sm text-white flex items-center px-3 py-1"
+                            className="bg-black font-RobotoMedium md:text-sm text-xs text-white flex items-center px-3 py-1"
                         >
                             <span>Submit</span>
                         </HoverBorderButton>

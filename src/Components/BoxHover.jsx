@@ -62,7 +62,7 @@ const Card = ({ className, children }) => {
 const CardTitle = ({ className, children }) => {
   
   return (
-    <h4 className={cn("text-[#1B99D4] text-2xl font-RobotoBold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-[#1B99D4] text-xl md:text-2xl font-RobotoBold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -74,7 +74,7 @@ const CardDescription = ({ className, children}) => {
     <p
    
     className={cn(
-      'mt-2 h-[7rem] overflow-y-auto scrollbar-hide text-white font-RobotoRegular text-sm ',
+      'mt-2 h-[7rem] overflow-y-auto scrollbar-hide text-white font-RobotoRegular text-xs md:text-sm ',
       
       className
     )}
@@ -94,7 +94,7 @@ const CardButton=({className,children,hovered})=>{
           )}
       >
       
-          <div className=" text-white text-sm font-RobotoMedium">Learn more</div>
+          <div className=" text-white text-xs md:text-sm font-RobotoMedium">Learn more</div>
        
       </div>
     )

@@ -142,8 +142,8 @@ export default function Footer(props) {
       }
       <div className="width w-full flex flex-col items-center justify-center ">
         <div className="md:w-[75%]   w-[80%] flex flex-row md:gap-24 gap-10 items-center justify-center">
-          <div className=" md:w-[16rem] md:h-[16rem] w-[9rem] h-[8rem] font-opensans ">
-            <img className="md:w-[15.3rem] md:h-[15.3rem]  " src={logoSVG} alt="Quantum Logo" />
+          <div className=" md:w-[16rem] md:h-[16rem] w-[9rem] h-[8rem]  flex items-center justify-center ">
+            <img className="md:w-[15.3rem] md:h-[15.3rem] w-[8rem] h-[8rem]" src={logoSVG} alt="Quantum Logo" />
           </div>
           <div className="w-[60%]  flex md:flex-row flex-col  md:gap-9 items-start justify-center font-opensans ">
             <div className="w-full flex md:gap-9  items-start justify-center">
