@@ -10,6 +10,16 @@ import Ourips from './Pages/Ourips';
 import Resources from './Pages/Resources';
 import Services from './Pages/Services'
 import Marketfit from './Pages/Marketfit';
+import QSleeve from './Pages/ProductPages/QSleeve';
+import LabAI from './Pages/ProductPages/LABAI';  
+import HealMed from './Pages/ProductPages/HealMed';
+import QubitIQ from './Pages/ProductPages/QubitIQ';
+import QMag from './Pages/ProductPages/QMag';
+import QMemory from './Pages/ProductPages/QMemory';
+import QFolioPro from './Pages/ProductPages/QFoliopro';
+import QKD from './Pages/ProductPages/QKD';
+import ClAIms from './Pages/ProductPages/ClAIms';
+import ChecQ from './Pages/ProductPages/ChecQ';
 
 
 function App() {
@@ -24,6 +34,18 @@ function App() {
       <Route path="/Partners" element={<Partners />} />
       <Route path="/Ourip" element={<Ourips />} />
       <Route path="/Resources" element={<Resources />} />
+      <Route path="/Products/QSleeve" element={<QSleeve />} />
+      <Route path="/Products/LabAI" element={<LabAI />} />
+      <Route path="/Products/HealMed" element={<HealMed />} />
+      <Route path="/Products/QubitIQ" element={<QubitIQ />} />
+      <Route path="/Products/QMag" element={<QMag />} />
+      <Route path="/Products/QMemory" element={<QMemory  />} />
+      <Route path="/Products/QFolioPro" element={<QFolioPro />} />
+      <Route path="/Products/QKD" element={<QKD />} />
+      <Route path="/Products/ClAIms" element={< ClAIms />} />
+      
+      <Route path="/Products/ChecQ" element={<ChecQ />} />
+
  
 
   </Routes>

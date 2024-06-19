@@ -9,7 +9,7 @@ export const quantumProducts = [
 ];
 
 export const aiProducts = [
-    { name: "CL(AI)MS", image: require("../../src/Images/CLAIMS LOGO.png") },
+    { name: "ClAIms", image: require("../../src/Images/CLAIMS LOGO.png") },
     { name: "HealMed", image: require("../../src/Images/HEAL MED LOGO.png") },
     { name: "LABAI", image: require("../../src/Images/LAB-AI LOGO.png") },
 ];

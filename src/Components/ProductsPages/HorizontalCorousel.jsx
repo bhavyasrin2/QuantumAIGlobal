@@ -5,7 +5,7 @@ import { cn } from "../utils/cn"; // Adjust this path according to your project 
 
 const variants = {
    left:{
-    x:'5rem',
+    x:'-1rem',
     opacity:0.4,
     scale:1 ,
     zIndex:0,
@@ -29,7 +29,7 @@ const variants = {
     }
    },
    right:{
-    x:'-5rem',
+    x:'1rem',
     opacity:0.4,
     zIndex:0,
     scale:1 ,
@@ -41,13 +41,13 @@ const variants = {
     }
    },
    lefthidden:{
-    x:'8rem',
+    x:'-8rem',
     opacity:0,
     zIndex:0,
 
    },
    righthidden:{
-    x:'-8rem',
+    x:'8rem',
     opacity:0,
     zIndex:0,
 
@@ -93,7 +93,8 @@ const Corousel = ({ className }) => {
             key={leftid}
             initial = {move ?  'center' :  'lefthidden' }
             variants={variants}
-            animate = 'left' >
+            animate = 'left'
+            exit='lefthidden' >
               <Card>
                 <CardTitle></CardTitle>
                 <CardDescription kid={leftid}></CardDescription>
@@ -113,7 +114,8 @@ const Corousel = ({ className }) => {
              key={rightid}
              initial = {move ?  'righthidden' :  'left' }
              variants={variants}
-             animate = 'right'>
+             animate = 'right'
+             exit='righthidden'>
               <Card >
                 <CardTitle></CardTitle>
                 <CardDescription kid={rightid}></CardDescription>

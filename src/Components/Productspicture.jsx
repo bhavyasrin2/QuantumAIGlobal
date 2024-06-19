@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { quantumProducts,aiProducts } from '../Data/Products';
+import { useNavigate } from 'react-router-dom';
 
 
 const PinPointer = ({title}) => (
@@ -33,6 +34,7 @@ const PinPointer = ({title}) => (
 export default function Productspicture() {
     const [hoveredIndex1, setHoveredIndex1] = useState(null);
     const [hoveredIndex2, setHoveredIndex2] = useState(null);
+
   
     const totalImages1 = quantumProducts.length;
     const totalImages2 = aiProducts.length;
@@ -47,6 +49,13 @@ export default function Productspicture() {
     const [surroundingQuantumHeight, setsurroundingQuantumHeight] = useState(74.5);
     const [enlargedImageSizeWidth, setenlargedImageSizeWidth] = useState(95);
     const [enlargedImageSizeHeight, setenlargedImageSizeHeight] = useState(95.6);
+
+    const navigate = useNavigate();
+
+   const handleCardClick = (id) => {
+    const url = `/Products/${id}`;
+    window.open(url, '_blank'); // Open in a new tab or window
+    };
     
    
 
@@ -55,23 +64,23 @@ export default function Productspicture() {
         const screenWidth = window.innerWidth;
   
         if (screenWidth >= 1536) {
-          setradius1(250);
-          setradius2(200);
-          setcenterImageSize1(320);
-          setcenterImageSize2(200);
-          setsurroundingQuantumWidth(86.4);
-          setsurroundingQuantumHeight(87);
-          setenlargedImageSizeWidth(105.334);
-          setenlargedImageSizeHeight(106);
+          setradius1(340);
+          setradius2(250);
+          setcenterImageSize1(400);
+          setcenterImageSize2(250);
+          setsurroundingQuantumWidth(105.334);
+          setsurroundingQuantumHeight(106);
+          setenlargedImageSizeWidth(125.334);
+          setenlargedImageSizeHeight(126);
         } else {
-          setradius1(215);
-          setradius2(155);
-          setcenterImageSize1(270);
-          setcenterImageSize2(160);
-          setsurroundingQuantumWidth(74);
-          setsurroundingQuantumHeight(74.5);
-          setenlargedImageSizeWidth(95);
-          setenlargedImageSizeHeight(95.6);
+          setradius1(340);
+          setradius2(250);
+          setcenterImageSize1(400);
+          setcenterImageSize2(250);
+          setsurroundingQuantumWidth(105.334);
+          setsurroundingQuantumHeight(106);
+          setenlargedImageSizeWidth(125.334);
+          setenlargedImageSizeHeight(126);
         }
       };
   
@@ -81,14 +90,14 @@ export default function Productspicture() {
 
 
     return (
-        <div className="w-full  flex items-center justify-center md:h-[37.5rem] 2xl:h-[45rem] ">
-             <div className='w-full relative flex items-center justify-center h-full 2xl:h-[38rem]' >
-                <div className='absolute  h-full top-[22%] transform -translate-x-1/2 left-1/2'>
+        <div className="w-full  flex items-center justify-center h-[60rem] ">
+             <div className='w-full relative flex items-center justify-center h-full' >
+                <div className='absolute  h-full top-[20%] transform -translate-x-1/2 left-1/2'>
                     <img className='block object-cover' src={require("../../src/Images/QuantumCircleblack.png")} style={{
                         width: `${centerImageSize1}px`,
                         height: `${centerImageSize1}px`,
                     }} alt="Quantum Circle" />
-                    <p className=' absolute top-[22%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-RobotoBold  text-white font-extrabold text-xl  xl:text-4xl '>Quantum</p>
+                    <p className=' absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-RobotoBold  text-white font-extrabold text-5xl '>Quantum</p>
                     {quantumProducts.map((product, index) => {
                         const angle = 150 + index * angleIncrement1;
                         const x = radius1 * Math.cos((angle * Math.PI) / 180);
@@ -110,6 +119,7 @@ export default function Productspicture() {
                             }}
                             onMouseEnter={() => setHoveredIndex1(index)}
                             onMouseLeave={() => setHoveredIndex1(null)}
+                            onClick={() => handleCardClick(product.name)}
                           >
                             <img
                             
@@ -129,12 +139,12 @@ export default function Productspicture() {
                 </div>
 
                 {/* AI Circle */}
-                <div className='absolute top-[50%] transform -translate-x-1/2 left-1/2'>
+                <div className='absolute top-[48%] transform -translate-x-1/2 left-1/2'>
                     <img className='block object-cover' src={require("../../src/Images/AICircleblack.png")} style={{
                         width: `${centerImageSize2}px`,
                         height: `${centerImageSize2}px`,
                     }} alt="AI Circle" />
-                    <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-RobotoBold text-white font-extrabold text-xl  xl:text-4xl '>AI</p>
+                    <p className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-RobotoBold text-white font-extrabold text-5xl '>AI</p>
                     {aiProducts.map((product, index) => {
                         const angle = 45 + index * angleIncrement2;
                         const x = radius2 * Math.cos((angle * Math.PI) / 180);
@@ -155,6 +165,7 @@ export default function Productspicture() {
                             }}
                             onMouseEnter={() => setHoveredIndex2(index)}
                             onMouseLeave={() => setHoveredIndex2(null)}
+                            onClick={() => handleCardClick(product.name)}
                           >
                             <img
                             
