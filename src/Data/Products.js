@@ -15,49 +15,56 @@ export const aiProducts = [
 ];
 
 export const products = [
-    {
-      title: "QSleeve",
-      description:
-        "The imminent threat of quantum computing to our communication security has prompted the development of an encryption wrapper based on quantum-resistant Post Quantum Cryptography algorithms.",
-      link: "https://stripe.com",
-    },
-    {
-      title: "Qubit-IQ",
-      description:
-        "In the cutting-edge world of technology, quantum computing is revolutionizing data processing, and we propose an intelligent software system that combines machine intelligence and quantum computing to process diverse data types.",
-      link: "https://netflix.com",
-    },
-    {
-      title: "QKD",
-      description:
-        "EPS-based QKD Demonstrator Box for Academia Kick start your experimentation in quantum communication with confidence using our EPS-based QKD Demonstrator Box, an essential tool for understanding quantum entanglement and encryption.",
-      link: "https://google.com",
-    },
-    {
-      title: "Q-Folio Pro",
-      description:
-        "We leverage Quantum for Finance. Our solution demonstrates how quantum computing can revolutionize portfolio optimization,bringing unprecedented speed and efficiency.",
-      link: "https://meta.com",
-    },
-    {
-      title: "HealMed",
-      description:
-        "HealMed is Our AI based Clinical Decision Support System (CDSS) that automates patient mental health assessments, stratifies their responses and helps in improving patient outcomes.",
-      link: "https://amazon.com",
-    },
-    {
-      title: "LAB-AI",
-      description:
-        "Enables the customers to search and review policies, procedures and provide risk assessments to our clients, all different kind of compliances required to be adhered to like HIPAA guidelines.",
-      link: "https://microsoft.com",
-    },
-    {
-      title: "Cl(AI)ms",
-      description:
-        "Appeals patient-specific, Denials-specific, and payer-specific appeals letters using our Al. Our system sends appeal letters to the appropriate parties based on each individual’s circumstances, with a 99% accuracy rate based on our Al evaluation.",
-      link: "https://microsoft.com",
-    },
-  ];
+  {
+    id: 1,
+    title: "QSleeve",
+    description:
+      "The imminent threat of quantum computing to our communication security has prompted the development of an encryption wrapper based on quantum-resistant Post Quantum Cryptography algorithms.",
+    link: "https://stripe.com",
+  },
+  {
+    id: 2,
+    title: "Qubit-IQ",
+    description:
+      "In the cutting-edge world of technology, quantum computing is revolutionizing data processing, and we propose an intelligent software system that combines machine intelligence and quantum computing to process diverse data types.",
+    link: "https://netflix.com",
+  },
+  {
+    id: 3,
+    title: "QKD",
+    description:
+      "EPS-based QKD Demonstrator Box for Academia Kick start your experimentation in quantum communication with confidence using our EPS-based QKD Demonstrator Box, an essential tool for understanding quantum entanglement and encryption.",
+    link: "https://google.com",
+  },
+  {
+    id: 4,
+    title: "Q-Folio Pro",
+    description:
+      "We leverage Quantum for Finance. Our solution demonstrates how quantum computing can revolutionize portfolio optimization,bringing unprecedented speed and efficiency.",
+    link: "https://meta.com",
+  },
+  {
+    id: 5,
+    title: "HealMed",
+    description:
+      "HealMed is Our AI based Clinical Decision Support System (CDSS) that automates patient mental health assessments, stratifies their responses and helps in improving patient outcomes.",
+    link: "https://amazon.com",
+  },
+  {
+    id: 6,
+    title: "LAB-AI",
+    description:
+      "Enables the customers to search and review policies, procedures and provide risk assessments to our clients, all different kind of compliances required to be adhered to like HIPAA guidelines.",
+    link: "https://microsoft.com",
+  },
+  {
+    id: 7,
+    title: "Cl(AI)ms",
+    description:
+      "Appeals patient-specific, Denials-specific, and payer-specific appeals letters using our Al. Our system sends appeal letters to the appropriate parties based on each individual’s circumstances, with a 99% accuracy rate based on our Al evaluation.",
+    link: "https://microsoft.com",
+  },
+];
 
   export const patentproductsdata = [
     {

@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "../utils/cn"; // Adjust this path according to your project structure
+import { cn } from "../../utils/cn"; // Adjust this path according to your project structure
 
-const BoxHover = ({ items, className }) => {
+const FeatureHover = ({ items, className }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
 
   return (
-    <div className={cn("grid  justify-items-center items-center grid-cols-1 md:grid-cols-3  py-5", className)}>
+    <div className={cn("justify-center items-center flex flex-wrap  py-5", className)}>
       {items.map((item, idx) => (
         <a
           href={item.link}
           key={item.link}
-          className="relative group block p-2 h-full w-full"
+          className="relative group block p-2 h-full w-full md:w-[50%] 2xl:w-[33%]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -73,7 +73,7 @@ const CardDescription = ({ className, children}) => {
     <p
    
     className={cn(
-      'mt-2 h-[7rem] overflow-y-auto scrollbar-hide text-white font-RobotoRegular text-xs md:text-sm ',
+      'mt-2 h-[10rem] text-white font-RobotoRegular text-xs md:text-sm ',
       
       className
     )}
@@ -85,4 +85,4 @@ const CardDescription = ({ className, children}) => {
 
 
 
-export { BoxHover, Card, CardTitle, CardDescription };
+export { FeatureHover, Card, CardTitle, CardDescription };

@@ -7,12 +7,15 @@ const BoxHover = ({ items, className }) => {
 
 
   return (
-    <div className={cn("grid  justify-items-center items-center grid-cols-1 md:grid-cols-3  py-5", className)}>
+    <div className={cn(" justify-center items-center flex flex-wrap  py-5", className)}>
       {items.map((item, idx) => (
         <a
           href={item.link}
-          key={item.link}
-          className="relative group block p-2 h-full w-full"
+
+
+          
+          key={item.id}
+          className="relative group block p-2 h-full w-full md:w-[50%] 2xl:w-[33%]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -48,7 +51,7 @@ const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full px-4 py-3 overflow-hidden bg-black border-[0.03rem]  border-[#444D61] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full px-4 py-3 overflow-hidden bg-black border-[0.03rem]   border-[#444D61] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
