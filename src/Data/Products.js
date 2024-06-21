@@ -4,12 +4,12 @@ export const quantumProducts = [
     { name: "QMag", image: require("../../src/Images/Q-Mag.png") },
     { name: "QMemory", image: require("../../src/Images/Q MEMORY LOGO.png") },
     { name: "QFoliopro", image: require("../../src/Images/Q-folio pro logo.png") },
-    { name: "QKD", image: require("../../src/Images/QKD LOGO.png") },
+    { name: "EPS-QKD", image: require("../../src/Images/QKD LOGO.png") },
     { name: "QubitIQ", image: require("../../src/Images/QUBIT-IQ LOGO.png") },
 ];
 
 export const aiProducts = [
-    { name: "ClAIms", image: require("../../src/Images/CLAIMS LOGO.png") },
+    { name: "CL(AI)MS", image: require("../../src/Images/CLAIMS LOGO.png") },
     { name: "HealMed", image: require("../../src/Images/HEAL MED LOGO.png") },
     { name: "LABAI", image: require("../../src/Images/LAB-AI LOGO.png") },
 ];
@@ -31,7 +31,7 @@ export const products = [
   },
   {
     id: 3,
-    title: "QKD",
+    title: "EPS-QKD",
     description:
       "EPS-based QKD Demonstrator Box for Academia Kick start your experimentation in quantum communication with confidence using our EPS-based QKD Demonstrator Box, an essential tool for understanding quantum entanglement and encryption.",
     link: "https://google.com",
@@ -59,7 +59,7 @@ export const products = [
   },
   {
     id: 7,
-    title: "Cl(AI)ms",
+    title: "CL(AI)MS",
     description:
       "Appeals patient-specific, Denials-specific, and payer-specific appeals letters using our Al. Our system sends appeal letters to the appropriate parties based on each individual’s circumstances, with a 99% accuracy rate based on our Al evaluation.",
     link: "https://microsoft.com",

@@ -2,42 +2,26 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../utils/cn"; // Adjust this path according to your project structure
 
-const FeatureHover = ({ items, className }) => {
+const ServicesBox = ({ items, className }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
 
   return (
-    <div className={cn("justify-center items-center flex flex-wrap  py-5", className)}>
+    <div className={cn("justify-items-center items-center grid md:grid-cols-4 grid-cols-1  py-5", className)}>
       {items.map((item, idx) => (
-        <a
-          href={item.link}
+        <div
+         
           key={item.link}
-          className="relative group block p-2 h-full w-full md:w-[50%] 2xl:w-[33%]"
+          className="relative group block p-2 h-full w-full "
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-[#343434]  block rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
+         
           <Card >
             <CardTitle>{item.title}</CardTitle>
             <CardDescription >{item.description}</CardDescription>
           </Card>
-        </a>
+        </div>
       ))}
     </div>
   );
@@ -47,7 +31,7 @@ const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-[20rem] w-full px-4 py-3 overflow-hidden bg-black border-[0.03rem]  border-[#444D61] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-[18rem] w-full px-4 py-3 overflow-hidden bg-black border-[0.03rem]  border-slate-700 group-hover:border-[#1B99D4] relative z-20",
         className
       )}
     >
@@ -85,4 +69,4 @@ const CardDescription = ({ className, children}) => {
 
 
 
-export { FeatureHover, Card, CardTitle, CardDescription };
+export { ServicesBox, Card, CardTitle, CardDescription };

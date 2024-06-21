@@ -52,8 +52,21 @@ export default function Partners() {
           <Partnerslogocontainer />
         </div>
       </div>
-      <div className='w-full width px-10 pt-5 flex flex-col items-center justify-center gap-2'>
-        <TitleContent title="Partners" content="We have established valuable partnerships with a wide range of industry experts, enabling us to deliver exceptional solutions to our clients by leveraging their expertise and innovative approaches." />
+      <div className='w-full width px-10 py-10 flex flex-col items-center justify-center gap-2'>
+      <div className="w-full flex flex-col items-center justify-center">
+            <div className="w-full  text-center  font-RobotoBold  text-white text-[1.25rem] md:text-[2.3rem]">
+            Check what our
+            </div>
+            <div className="w-full  font-RobotoBold  wordGradient text-[1.25rem] md:text-[2.3rem] text-center">
+            Clients say about us
+            </div>
+            <p className="w-full max-w-xl text-center text-white font-RobotoRegular text-xs md:text-sm">
+          Our clients' testimonials showcase the real-world impact of our products and services.
+          </p>
+          </div>
+         
+      
+      
         <div className="w-full  mx-auto">
           <SimpleBoxContainer />
         </div>
