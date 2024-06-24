@@ -33,12 +33,12 @@ export default function Contactus() {
 
       <Header id={2} />
 
-      <div className='w-full md:h-[30rem] '>
+      <div className='w-full h-[30rem]  '>
 
         <HeroSection title1=""
           title2="Connect With Us" content="At Quantum.ai, we value your input, inquiries, and feedback. Our mission is to foster collaboration and innovation, and your communication plays a vital role in achieving that. Whether you have questions about our cutting-edge quantum technologies, want to explore partnership opportunities, or simply want to get in touch, we're here to listen." />
       </div>
-      <div className='w-full width px-10 pt-5 flex flex-col items-center justify-center gap-2'>
+      <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center gap-2'>
         <TitleContent title="We are Happy to Assist," content="At Quantum AI Global, we are dedicated to helping organizations harness the full potential of quantum and AI technology. If you have any questions or would like to learn more about our products and services, please don’t hesitate to get in touch with us." />
 
         <div className="w-full h-auto relative flex sm:flex-row flex-col items-center justify-center px-5 py-5 sm:gap-10 gap-5  ">

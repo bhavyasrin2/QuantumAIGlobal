@@ -10,8 +10,8 @@ const FeatureHover = ({ items, className }) => {
     <div className={cn("justify-center items-center flex flex-wrap  py-5", className)}>
       {items.map((item, idx) => (
         <a
-          href={item.link}
-          key={item.link}
+        href={item.link}
+        key={item.id}
           className="relative group block p-2 h-full w-full md:w-[50%] 2xl:w-[33%]"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -47,7 +47,7 @@ const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-[20rem] w-full px-4 py-3 overflow-hidden bg-black border-[0.03rem]  border-[#444D61] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-[13rem] md:h-[15rem] 2xl:h-[20rem] w-full px-4 py-3 overflow-hidden bg-black border-[0.03rem]  border-[#444D61] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -61,7 +61,7 @@ const Card = ({ className, children }) => {
 const CardTitle = ({ className, children }) => {
   
   return (
-    <h4 className={cn("text-[#1B99D4] text-xl md:text-2xl font-RobotoBold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-[#1B99D4] text-[1rem] md:text-xl 2xl:text-2xl font-RobotoBold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );

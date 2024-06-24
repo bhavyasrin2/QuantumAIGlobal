@@ -42,7 +42,7 @@ export default function QuantumAI() {
 
       <Header id={3} />
 
-      <div className='w-full h-[24rem] md:h-[30rem] '>
+      <div className='w-full h-[30rem] '>
 
         <HeroSection title1="Explore Quantum AI's"
           title2="Cutting-Edge Products" content="Quantum AI Global, we value your input, inquiries, and feedback. Our mission is to foster collaboration and innovation, and your communication plays a vital role in achieving that. Whether you have questions about our cutting-edge quantum technologies, want to explore partnership opportunities, or simply want to get in touch, we're here to listen." />
@@ -52,7 +52,7 @@ export default function QuantumAI() {
 
           <Productspicture />
         </div>
-        <div className='w-full width px-10 pt-5 flex flex-col items-center justify-center gap-2'>
+        <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center gap-2'>
           <TitleContent title="We build for future" content="All our algorithms are designed with a vision of future in quantum space and are scalable, able to solve problems that are too big or too difficult for current technologies." />
           <div className="max-w-5xl  mx-auto px-8">
             <BoxHover items={products} />

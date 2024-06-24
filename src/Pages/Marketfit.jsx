@@ -30,7 +30,7 @@ export default function Marketfit() {
         <div className='w-full  flex flex-col gap-0 items-center justify-center  bg-black'
             style={{ backgroundImage: `url(${backgroundImage})` }}>
             <Header id={3} />
-            <div className='w-full md:h-[30rem] '>
+            <div className='w-full h-[30rem] '>
 
                 <HeroSection title1="Explore Quantum AI's"
                     title2="Product - MarketFit" content="We bring a relentless customer focus to everything we do." />
@@ -116,7 +116,7 @@ export default function Marketfit() {
                                         </div>
                                         <div className='sm:w-full w-[95%] font-RobotoRegular  text-xs md:text-sm text-[#ffffff] text-justify'>A product suite to initiate the development to ease migration from the current set of public-key cryptographic algorithms to replacement algorithms that are resistant to quantum computer-based attacks.</div>
                                     </div>
-                                    <div className="flex flex-col sm:flex-row max-w-full  md:gap-6 gap-2 mx-auto items-center justify-center   px-3  cursor-pointer">
+                                    <div className="flex flex-wrap sm:flex-row max-w-full  md:gap-6 gap-2 mx-auto items-center justify-center   px-3  cursor-pointer">
                                         {migrationdata.map((item) => (
                                             <div key={item.id} className="flex-item ">
                                                 <Marketfitcomponent

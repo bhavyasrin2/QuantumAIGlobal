@@ -41,18 +41,18 @@ export default function Partners() {
 
 
       <Header id={5} />
-      <div className='w-full md:h-[30rem] '>
+      <div className='w-full h-[30rem] '>
 
         <HeroSection title1="Elevating Possibilities Together "
           title2="Our Trusted Partnerships" content="At Quantum.ai, we value your input, inquiries, and feedback. Our mission is to foster collaboration and innovation, and your communication plays a vital role in achieving that. Whether you have questions about our cutting-edge quantum technologies, want to explore partnership opportunities, or simply want to get in touch, we're here to listen." />
       </div>
-      <div className='w-full width px-10 pt-5 flex flex-col items-center justify-center gap-2'>
+      <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center gap-2'>
         <TitleContent title="Partners" content="We have established valuable partnerships with a wide range of industry experts, enabling us to deliver exceptional solutions to our clients by leveraging their expertise and innovative approaches." />
-        <div className="w-full  mx-auto">
+        <div className="mx-auto  md:px-5 2xl:px-8">
           <Partnerslogocontainer />
         </div>
       </div>
-      <div className='w-full width px-10 py-10 flex flex-col items-center justify-center gap-2'>
+      <div className='w-full width md:px-10 py-10 flex flex-col items-center justify-center gap-2'>
       <div className="w-full flex flex-col items-center justify-center">
             <div className="w-full  text-center  font-RobotoBold  text-white text-[1.25rem] md:text-[2.3rem]">
             Check what our
@@ -60,7 +60,7 @@ export default function Partners() {
             <div className="w-full  font-RobotoBold  wordGradient text-[1.25rem] md:text-[2.3rem] text-center">
             Clients say about us
             </div>
-            <p className="w-full max-w-xl text-center text-white font-RobotoRegular text-xs md:text-sm">
+            <p className="w-full max-w-xl text-center text-white font-RobotoRegular text-xs md:text-sm mt-5">
           Our clients' testimonials showcase the real-world impact of our products and services.
           </p>
           </div>

@@ -43,10 +43,10 @@ export default function RequestDemo() {
     };
 
     return (
-        <div className="md:w-[50%] max-w-5xl mx-auto flex md:flex-row flex-col md:gap-0 gap-8 items-center justify-center px-10 py-2">
+        <div className="w-[90%] md:w-[50%] max-w-5xl mx-auto flex md:flex-row flex-col md:gap-0 gap-8 items-center justify-center px-2 md:px-10 py-2">
             <div className="w-full px-3 py-5 md:px-10 md:py-10 rounded-xl flex flex-col justify-center items-center gap-4">
                 <div>
-                    <h2 className="w-full text-[1.25rem] md:text-[2.3rem] font-RobotoBold mb-1 wordGradient text-center">
+                    <h2 className="w-full text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold mb-1 wordGradient text-center">
                         Contact Quantum AI Global
                     </h2>
                     <div className='w-[90%] md:w-full font-RobotoMedium text-[#28ABE3] md:text-sm text-xs mb-1 text-center'>
@@ -61,7 +61,7 @@ export default function RequestDemo() {
                                 id="firstname"
                                 name="first_name"
                                 placeholder='First Name'
-                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                                className="px-2 py-2 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
@@ -73,7 +73,7 @@ export default function RequestDemo() {
                                 id="lastname"
                                 name="last_name"
                                 placeholder='Last Name'
-                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                                className="px-2 py-2 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
@@ -87,7 +87,7 @@ export default function RequestDemo() {
                                 id="email"
                                 name="user_email"
                                 placeholder='Email'
-                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                                className="px-2 py-2 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -99,7 +99,7 @@ export default function RequestDemo() {
                                 id="phoneNumber"
                                 name="user_phoneNumber"
                                 placeholder='Phone number'
-                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                                className="px-2 py-2 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={phoneNumber}
                                 onChange={(e) => setPhoneNumber(e.target.value)}
@@ -113,7 +113,7 @@ export default function RequestDemo() {
                                 id="organisation"
                                 name="user_organisation"
                                 placeholder="Organisation's Name"
-                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                                className="px-2 py-2 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={organisation}
                                 onChange={(e) => setOrganisation(e.target.value)}
@@ -125,7 +125,7 @@ export default function RequestDemo() {
                                 id="location"
                                 name="user_location"
                                 placeholder="Organisation's Location"
-                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                                className="px-2 py-2 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={location}
                                 onChange={(e) => setLocation(e.target.value)}
@@ -139,7 +139,7 @@ export default function RequestDemo() {
                                 id="subject"
                                 name="user_subject"
                                 placeholder='Subject'
-                                className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                                className="px-2 py-2 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                                 required
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
@@ -152,7 +152,7 @@ export default function RequestDemo() {
                             name="user_message"
                             placeholder='Type your Message'
                             rows="4"
-                            className="px-2 py-1 md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
+                            className="px-2 py-2 h-[10rem] md:p-3 w-full font-RobotoRegular text-[#ffffff] md:text-sm text-xs rounded-xl bg-[#000000]"
                             required
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}

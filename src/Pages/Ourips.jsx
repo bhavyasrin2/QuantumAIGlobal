@@ -33,7 +33,7 @@ export default function Ourips() {
 
 
       <Header id={6} />
-      <div className='w-full md:h-[30rem] '>
+      <div className='w-full h-[30rem] '>
 
         <HeroSection title1="Innovative. Exclusive."
           title2="Discover our patented products" content="At Quantum.ai, we value your input, inquiries, and feedback. Our mission is to foster collaboration and innovation, and your communication plays a vital role in achieving that. Whether you have questions about our cutting-edge quantum technologies, want to explore partnership opportunities, or simply want to get in touch, we're here to listen." />
@@ -41,9 +41,9 @@ export default function Ourips() {
       <div className="w-full width px-10 pt-5 flex flex-col items-center justify-center gap-2">
           <Productshorizontalcontainer />
         </div>
-        <div className='w-full width px-10 pt-5 flex flex-col items-center justify-center gap-2'>
+        <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center gap-4 md:gap-2'>
           <TitleContent title="" content="At Quantum Al Global, we believe in the transformative power of quantum and Al technology, and we are dedicated to delivering innovative solutions that help businesses transform and thrive. Contact us today to learn more about our services and how we can help you harness the full potential of these exciting technologies." />
-          <div className="max-w-5xl  mx-auto px-8">
+          <div className="mx-auto  md:px-5 2xl:px-8">
           <Ipcontainer />
           </div>
         </div>
