@@ -5,30 +5,28 @@ import HeroSection from '../Components/HeroSection'
 import { Serviceslist, Benefitslist } from '../Components/ServicesContainer';
 import TitleContent from '../Components/TitleContent';
 import { generateSvgDataUrl } from '../Components/Dimensions';
+import BackgroundGradient from '../Images/BackgroundGradient.png'
+import BackgroundGradientSmall from '../Images/BackgroundGradientSmall.png'
 
 export default function Services() {
-  const backgroundImageBig = generateSvgDataUrl("#060606", 70, 70);
-  const backgroundImageSmall = generateSvgDataUrl("#060606", 50, 50);
-  const [backgroundImage, setBackgroundImage] = useState(backgroundImageSmall);
+  const [backgroundImage, setBackgroundImage] = useState(``);
 
   useEffect(() => {
     const updateBackgroundImage = () => {
-      const screenWidth = window.innerWidth;
-
-      if (screenWidth >= 1536) {
-        setBackgroundImage(backgroundImageBig);
+      if (window.innerWidth < 640) {
+        setBackgroundImage(`url(${BackgroundGradientSmall})`);
       } else {
-        setBackgroundImage(backgroundImageSmall);
+        setBackgroundImage(`url(${BackgroundGradient})`);
       }
     };
 
     updateBackgroundImage();
-
+    window.addEventListener('resize', updateBackgroundImage);
+    return () => window.removeEventListener('resize', updateBackgroundImage);
   }, []);
   return (
-    <div className='w-full  flex flex-col gap-0 items-center justify-center  bg-black'
-      style={{ backgroundImage: `url(${backgroundImage})` }}>
-
+    <div className='w-full  flex flex-col gap-0 items-center justify-center bg-black'>
+      <div className='w-full width flex flex-col gap-0 items-center justify-center bg-contain bg-repeat'  style={{  backgroundImage: backgroundImage }}>
 
 
       <Header id={4} />
@@ -50,6 +48,7 @@ export default function Services() {
         </div>
       </div>
       <Footer showpage={false} />
+    </div>
     </div>
   )
 }

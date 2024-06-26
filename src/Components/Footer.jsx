@@ -151,36 +151,30 @@ export default function Footer(props) {
 
                 <div className="text-[#1B99D4]  font-semibold  2xl:text-xl md:text-lg text-sm leading-loose mb-1.5">Product</div>
                 <ul className="text-[#ffffff] text-xs md:text-sm">
-                  <li onClick={() => {
-                    scrollToTop();
-                    navigate("/Products")
-                  }} className="w-full hover:text-[#ffffff] cursor-pointer text-[#798397]">Quantum-AI</li>
-                  <li onClick={() => {
-                    scrollToTop();
-                    navigate("/Products")
-                  }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">MarketFit</li>
-                  <li onClick={() => {
-                    scrollToTop();
-                    navigate("/Ourip")
-                  }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Our IP's</li>
+                  <li  onClick={() => {
+                      scrollToTop();
+                      navigate("/Products/Quantum-AI")
+                    }} className="w-full hover:text-[#ffffff] cursor-pointer text-[#798397]">Quantum-AI</li>
+                  <li  onClick={() => {
+                      scrollToTop();
+                      navigate("/Products/MarketFit")
+                    }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">MarketFit</li>
+                  <li onClick={() => {scrollToTop();navigate("/Ourip")}} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Our IP's</li>
                 </ul>
               </div>
               <div className=" p-[0.625rem] font-RobotoRegular">
 
                 <div className="text-[#1B99D4]  font-semibold  2xl:text-xl md:text-lg text-sm leading-loose mb-1.5">Company</div>
                 <ul className="text-[#ffffff] text-xs md:text-sm">
+                  <li  onClick={() => {
+                      scrollToTop();
+                      navigate("/Company/AboutUs")
+                    }} className="mb-1  hover:text-[#ffffff] cursor-pointer text-[#798397]">About us</li>
                   <li onClick={() => {
-                    scrollToTop();
-                    navigate("/Aboutus")
-                  }} className="mb-1  hover:text-[#ffffff] cursor-pointer text-[#798397]">About us</li>
-                  <li onClick={() => {
-                    scrollToTop();
-                    navigate("/Contactus")
-                  }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Contact us</li>
-                  <li onClick={() => {
-                    scrollToTop();
-                    navigate("/Resources")
-                  }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Resources</li>
+                      scrollToTop();
+                      navigate("/Company/ContactUs")
+                    }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Contact us</li>
+                  <li onClick={() => {scrollToTop();navigate("/Resources")}} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Resources</li>
 
                 </ul>
               </div>

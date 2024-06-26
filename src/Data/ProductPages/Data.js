@@ -57,3 +57,33 @@ export const servicesData = [
             description: "QSleeve offers high customizability to meet user-specific requirements. Tailor security protocols and configurations to match your unique needs, ensuring optimal protection against quantum threats."
         },];
 
+
+
+   export  const servicestackdata = [
+            {
+              id: 0,
+              name: "Quantum Secure Migration",
+             
+              content: "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era."
+            },
+            {
+              id: 1,
+              name: "Quantum Data Migration",
+             
+              content: "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era."
+             
+            },
+            {
+              id: 2,
+              name: "Quantum Secure Migration",
+             
+              content: "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era."
+            },
+            {
+                id: 3,
+                name: "Quantum Secure Migration",
+             
+                content: "QSleeve ensures data security against quantum attacks by using post-quantum cryptography (PQC). PQC employs advanced mathematical algorithms resistant to quantum decryption methods, safeguarding sensitive information in the future quantum era."
+              },
+          ];
+

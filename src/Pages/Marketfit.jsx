@@ -6,29 +6,34 @@ import Marketfitcomponent from '../Components/Marketfitcomponent'
 import { migrationdata, readydata, bankingdata } from '../Data/Marketfit'
 import { generateSvgDataUrl } from '../Components/Dimensions';
 import TitleContent from '../Components/TitleContent';
+import BackgroundGradient from '../Images/BackgroundGradient.png'
+import BackgroundGradientSmall from '../Images/BackgroundGradientSmall.png'
 
 export default function Marketfit() {
-    const backgroundImageBig = generateSvgDataUrl("#060606", 70, 70);
-    const backgroundImageSmall = generateSvgDataUrl("#060606", 50, 50);
-    const [backgroundImage, setBackgroundImage] = useState(backgroundImageSmall);
+    const [backgroundImage, setBackgroundImage] = useState(``);
 
-    useEffect(() => {
-        const updateBackgroundImage = () => {
-            const screenWidth = window.innerWidth;
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      if (window.innerWidth < 640) {
+        setBackgroundImage(`url(${BackgroundGradientSmall})`);
+      } else {
+        setBackgroundImage(`url(${BackgroundGradient})`);
+      }
+    };
 
-            if (screenWidth >= 1536) {
-                setBackgroundImage(backgroundImageBig);
-            } else {
-                setBackgroundImage(backgroundImageSmall);
-            }
-        };
+    // Set initial background image
+    updateBackgroundImage();
 
-        updateBackgroundImage();
+    // Update background image on window resize
+    window.addEventListener('resize', updateBackgroundImage);
 
-    }, []);
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', updateBackgroundImage);
+  }, []);
+
     return (
-        <div className='w-full  flex flex-col gap-0 items-center justify-center  bg-black'
-            style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div className='w-full  flex flex-col gap-0 items-center justify-center bg-black'>
+      <div className='w-full width flex flex-col gap-0 items-center justify-center bg-contain bg-repeat'  style={{  backgroundImage: backgroundImage }}>
             <Header id={3} />
             <div className='w-full h-[30rem] '>
 
@@ -116,7 +121,7 @@ export default function Marketfit() {
                                         </div>
                                         <div className='sm:w-full w-[95%] font-RobotoRegular  text-xs md:text-sm text-[#ffffff] text-justify'>A product suite to initiate the development to ease migration from the current set of public-key cryptographic algorithms to replacement algorithms that are resistant to quantum computer-based attacks.</div>
                                     </div>
-                                    <div className="flex flex-wrap sm:flex-row max-w-full  md:gap-6 gap-2 mx-auto items-center justify-center   px-3  cursor-pointer">
+                                    <div className="flex md:flex-row flex-col   max-w-full  md:gap-6 gap-2 mx-auto items-center justify-center   px-3  cursor-pointer">
                                         {migrationdata.map((item) => (
                                             <div key={item.id} className="flex-item ">
                                                 <Marketfitcomponent
@@ -141,7 +146,7 @@ export default function Marketfit() {
                                         </div>
                                         <div className='sm:w-full w-[95%] font-RobotoRegular  text-xs md:text-sm text-[#ffffff] text-justify'>We leverage quantum key distribution to protect data and communications, keeping society, businesses and people safe now and in the long-term future. Ensuring everyone can communicate and exchange information safely. For the long run.</div>
                                     </div>
-                                    <div className="flex flex-col sm:flex-row max-w-full  md:gap-6 gap-2 mx-auto items-center justify-center   px-3  cursor-pointer">
+                                    <div className="flex flex-col sm:flex-row  max-w-full  md:gap-6 gap-2 mx-auto items-center justify-center   px-3  cursor-pointer">
                                         {readydata.map((item) => (
                                             <div key={item.id} className="flex-item ">
                                                 <Marketfitcomponent
@@ -207,6 +212,7 @@ export default function Marketfit() {
 
             </div>
             <Footer showpage={false} />
+        </div>
         </div>
 
     )

@@ -4,7 +4,11 @@ import Footer from "../Components/Footer"
 import { generateSvgDataUrl } from "../Components/Dimensions";
 import HeroSection from '../Components/HeroSection';
 import TitleContent from '../Components/TitleContent';
-import Whitepapersverticalcontainer from '../Components/Whitepapersverticalcontainer'
+import Whitepapersverticalcontainer from '../Components/Whitepapersverticalcontainer';
+import Profilecomponent from '../Components/Profilecomponent';
+import { mentorsprofile } from '../Data/Profiles';
+import BackgroundGradient from '../Images/BackgroundGradient.png'
+import BackgroundGradientSmall from '../Images/BackgroundGradientSmall.png'
 
 
 
@@ -13,30 +17,27 @@ import Whitepapersverticalcontainer from '../Components/Whitepapersverticalconta
 
 
 export default function Resources() {
-  const backgroundImageBig = generateSvgDataUrl("#060606", 70, 70);
-  const backgroundImageSmall = generateSvgDataUrl("#060606", 50, 50);
-  const [backgroundImage, setBackgroundImage] = useState(backgroundImageSmall);
+  const [backgroundImage, setBackgroundImage] = useState(``);
 
   useEffect(() => {
     const updateBackgroundImage = () => {
-      const screenWidth = window.innerWidth;
-
-      if (screenWidth >= 1536) {
-        setBackgroundImage(backgroundImageBig);
+      if (window.innerWidth < 640) {
+        setBackgroundImage(`url(${BackgroundGradientSmall})`);
       } else {
-        setBackgroundImage(backgroundImageSmall);
+        setBackgroundImage(`url(${BackgroundGradient})`);
       }
     };
 
     updateBackgroundImage();
-
+    window.addEventListener('resize', updateBackgroundImage);
+    return () => window.removeEventListener('resize', updateBackgroundImage);
   }, []);
 
 
 
   return (
-    <div className='w-full  flex flex-col gap-0 items-center justify-center  bg-black'
-      style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className='w-full  flex flex-col gap-0 items-center justify-center bg-black'>
+      <div className='w-full width flex flex-col gap-0 items-center justify-center bg-contain bg-repeat'  style={{  backgroundImage: backgroundImage }}>
 
 
       <Header id={7} />
@@ -53,13 +54,24 @@ export default function Resources() {
       </div>
       <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center gap-2'>
         <TitleContent title="Mentors" content="Our mentors comprise industry leaders, entrepreneurs, and professionals who have excelled in their respective fields. They are passionate about sharing their insights and helping us and our stakeholders reach full potential. They foster a strong sense of community and work with us as trusted allies, offering ongoing support and building lifelong connections." />
-        {/* <div className="mx-auto px-8">
-          <Whitepapersverticalcontainer/>
-        </div> */}
+        <div className="flex flex-wrap md:w-[80rem] items-center justify-center md:px-10  cursor-pointer px-3">
+              {mentorsprofile.map((item) => (
+                <div key={item.id} className="flex-item">
+                  <Profilecomponent
+                    name={item.name}
+                    img={item.img}
+                    linkedin={item. linkedin}
+                    title = {item.title}
+
+                  />
+                </div>
+              ))}
+            </div>
       </div>
 
 
       <Footer showpage={false} />
+    </div>
     </div>
 
 
