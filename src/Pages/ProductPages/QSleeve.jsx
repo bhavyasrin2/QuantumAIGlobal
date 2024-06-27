@@ -15,11 +15,12 @@ import CardStack from "../../Components/ProductsPages/ServiceStack";
 import { Corousel } from "../../Components/ProductsPages/HorizontalCorousel";
 import BackgroundGradient from '../../Images/BackgroundGradient.png'
 import BackgroundGradientSmall from '../../Images/BackgroundGradientSmall.png'
+import VideoComponent from "../../Components/VideoComponent";
 
 
 export default function QSleeve() {
-  const [toggle, setToggle] = useState(false);
-  const videoRef = useRef(null);
+  const requestDemoRef = useRef(null);
+  const architectureRef = useRef(null);
 
   const [backgroundImage, setBackgroundImage] = useState(``);
 
@@ -32,53 +33,54 @@ export default function QSleeve() {
       }
     };
 
-    // Set initial background image
     updateBackgroundImage();
 
-    // Update background image on window resize
     window.addEventListener('resize', updateBackgroundImage);
 
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener('resize', updateBackgroundImage);
   }, []);
 
-
-
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const scrollToRequestDemo = () => {
+    requestDemoRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
- const MouseEnterVideo=()=>{
-  if(videoRef.current){
-    videoRef.current.play();
-    
-  }
-   
- }
+  const scrollToArchitecture = () => {
+    architectureRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
+
 
   return (
     <div className='w-full  flex flex-col gap-0 items-center justify-center bg-black'>
       <div className='w-full width flex flex-col gap-0 items-center justify-center bg-contain bg-repeat'  style={{  backgroundImage: backgroundImage }}>
-      <ProductHeader />
-      <div className="w-full h-[30rem] md:h-[40rem]">
+      <ProductHeader  scrollToRequestDemo={scrollToRequestDemo}/>
+      <div className="w-full h-[30rem] ">
         <ProductsHeroSection
           title1="Quantum-safe data "
           title2="protection made easy"
           content="Future-proof your online security with our VPN’s quantum-safe technology, keeping your data safe from even the most advanced attacks. "
+          scrollToArchitecture={scrollToArchitecture}
+         
         />
       </div>
-      <div className="w-full h-[60vh]  width flex flex-col items-center justify-center">
+      <div className="w-full h-[60vh]  width  flex-col items-center justify-center  hidden">
         <Scroll />
       </div>
-      <div className="w-full width md:px-10 pt-28 flex flex-col items-center justify-center  gap-1">
-
-        <img className="w-[64rem] h-[30rem] object-contain " src={require("../../../src/Images/QSleeveDesign.png")}></img>
+      <div className="w-full  width flex flex-col items-center justify-center  ">
+       
+      <img className="w-[21.5rem] h-[15.1rem] md:w-[55.5rem] md:h-[42.5rem] object-contain rounded-lg md:rounded-2xl" src={require("../../../src/Images/QSleeve Dashboard.png")}></img>
+      
       </div>
-      <div className="w-full width md:px-10 pt-24 flex flex-col items-center justify-center  gap-10">
+      <div className="w-full width px-5 md:px-10 mt-14 md:mt-28 flex flex-col items-center justify-center  gap-1">
+
+        <img className="md:w-[64rem] md:h-[30rem] object-contain " src={require("../../../src/Images/QSleeveDesign.png")}></img>
+      </div>
+      <div className="w-full width px-5 md:px-10 mt-14 md:mt-24 flex flex-col items-center justify-center  gap-16"  ref={architectureRef}>
         <div className="font-RobotoBold  wordGradient text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem]">
           ARCHITECTURE
         </div>
-        <img className="w-[64rem] h-[30rem] object-contain" src={require("../../../src/Images/QSleeveArchitecture.png")}></img>
+        <img className="md:w-[64rem] md:h-[30rem] object-contain" src={require("../../../src/Images/QSleeveArchitecture.png")}></img>
       </div>
       <div className="w-full width md:px-10 pt-28 flex flex-col items-center justify-center  gap-1">
         <div className="font-RobotoBold  wordGradient text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem]">
@@ -92,7 +94,7 @@ export default function QSleeve() {
         <div className="font-RobotoBold  wordGradient text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem]">
           SERVICES
         </div>
-        <div className='w-full h-auto md:h-[30rem] my-10 width   flex md:flex-row flex-col justify-center items-center md:px-10 '>
+        <div className='w-full h-auto md:h-[30rem] my-10 width gap-10 md:gap-0  flex md:flex-row flex-col justify-center items-center md:px-10 '>
           <div className='h-full w-[90%] md:w-[30%] flex flex-col justify-center items-center   py-3 md:pl-20 '>
             <div className='w-full  flex flex-col items-center justify-center gap-1'>
 
@@ -114,13 +116,8 @@ export default function QSleeve() {
         </div>
 
       </div>
-      <div className="w-full width h-[25rem] md:h-[35rem] flex items-center  videoBackground justify-center py-3 my-6 " onMouseEnter={MouseEnterVideo}>
-        <video ref={videoRef} controls autoPlay={toggle} muted className="w-full h-[20rem] md:w-[60rem] md:h-[30rem] object-contain" poster={QSleeveImage} onClick={handleToggle}>
-          <source src={QSleeveVideo} type="video/mp4" />
-
-        </video>
-      </div>
-      <div className='w-full width flex flex-col items-center justify-center gap-2'>
+      <VideoComponent image={QSleeveImage} video={QSleeveVideo}/>
+      <div className='w-full width flex flex-col items-center justify-center gap-2 '  ref={requestDemoRef}>
 
         <RequestDemo />
       </div>

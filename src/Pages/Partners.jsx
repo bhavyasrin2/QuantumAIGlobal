@@ -59,7 +59,7 @@ export default function Partners() {
         </div>
       </div>
       <div className='w-full width md:px-10 py-10 flex flex-col items-center justify-center gap-2'>
-      <div className="w-full flex flex-col items-center justify-center">
+      <div className="w-[90%] md:w-full flex flex-col items-center justify-center">
             <div className="w-full  text-center  font-RobotoBold  text-white text-[1.25rem] md:text-[2.3rem]">
             Check what our
             </div>

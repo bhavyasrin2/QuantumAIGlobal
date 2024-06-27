@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ProductHeader() {
+export default function ProductHeader(props) {
   return (
     <div className="w-full flex items-center justify-center   h-[5rem]  ">
       <div className="w-full sm:w-full width h-full  flex items-center justify-center  ">
@@ -12,7 +12,7 @@ export default function ProductHeader() {
           />
 
           <div className="productbuttonclass  ">
-            <div className="px-4 py-2 bg-[#191D26] text-[#4E95FF] md:text-sm text-xs rounded-xl relative">
+            <div className="px-4 py-2 bg-[#191D26] text-[#4E95FF] md:text-sm text-xs rounded-xl relative " onClick={props.scrollToRequestDemo}>
               <button>Request Demo</button>
               <div
                 className="absolute -z-2 left-[40%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 inset-0 md:w-[6rem] md:h-[1rem]"

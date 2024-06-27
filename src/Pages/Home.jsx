@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect ,useRef} from 'react'
 import Header from '../Components/Header';
 import Footer from "../Components/Footer"
 import { generateSvgDataUrl } from "../Components/Dimensions";
@@ -13,6 +13,7 @@ import { HomeBoxHover } from '../Components/BoxHover';
 import global from '../../src/Images/globe.png';
 import BackgroundGradient from '../Images/BackgroundGradient.png'
 import BackgroundGradientSmall from '../Images/BackgroundGradientSmall.png'
+import VideoComponent from '../Components/VideoComponent';
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
   // const backgroundImageBig = generateSvgDataUrl("#060606", 70, 70);
   // const backgroundImageSmall = generateSvgDataUrl("#060606", 50, 50);
   // const [backgroundImage, setBackgroundImage] = useState(backgroundImageSmall);
+  const VideoRef = useRef(null);
   const [toggle, setToggle] = useState(false);
 
   
@@ -42,6 +44,10 @@ export default function Home() {
     window.addEventListener('resize', updateBackgroundImage);
     return () => window.removeEventListener('resize', updateBackgroundImage);
   }, []);
+
+  const scrollToVideo = () => {
+    VideoRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   // useEffect(() => {
   //   const updateBackgroundImage = () => {
@@ -73,16 +79,17 @@ export default function Home() {
 
       <div className='w-full h-[25rem] '>
         <MainHerosection title1="Welcome To"
-          title2="Quantum AI" content="Leading the way in Quantum & AI Innovations." />
+          title2="Quantum AI Global" content="Leading the way in Quantum & AI Solutions" MainHerosection={scrollToVideo} />
       </div>
-      <div className='w-full width flex flex-col items-center justify-center md:px-10 gap-6 mb-10 relative'>
+      <div className='w-full width flex flex-col items-center justify-center md:px-10 2xl:px-20 gap-6 mb-10 relative'>
         <div className='w-full h-auto md:h-[40rem] p-3 width grid md:grid-cols-2 justify-items-center   items-center  '>
           <div className='w-[90%] h-full flex flex-col justify-center items-center   p-3'>
             <div className='w-full  flex flex-col items-center justify-center gap-1'>
 
-              <div className='w-full  text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold text-white leading-tight px-3'>The Easiest Way To</div> <div className='w-full  text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold wordGradient leading-tight px-3'>Secure Your Data</div>
+              <div className='w-full  text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold text-white leading-tight px-3'>Explore Quantum Revolution at
+             </div> <div className='w-full  text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold wordGradient leading-tight px-3'> Quantum AI Global</div>
             </div>
-            <div className='w-full text-white text-left font-RobotoRegular text-xs md:text-sm px-3'>Lorem ipsum dolor sit amet consectetur. Aliquam mi sapien ut vel. Lacus tellus velit sed senectus. Tellus vitae mi sapien ante. Ultricies gravida pretium adipiscing amet.
+            <div className='w-full text-white text-left font-RobotoRegular text-xs md:text-sm px-3'>Quantum AI Global is a technology first start-up working in creating systems that convert data into intelligence by building products that generate usable information. We see that only a fraction of enterprise data is converted into Intelligence today.
             </div>
             <div className='w-full  z-10  px-3'>
               <HomeBoxHover items={homepagebox} />
@@ -104,13 +111,10 @@ export default function Home() {
           }}
         ></div>
       </div>
-
-      <div className="w-full width h-[25rem] md:h-[35rem] flex items-center  videoBackground justify-center py-3 my-6 ">
-        <video controls autoPlay={toggle} muted className="w-full h-[20rem] md:w-[60rem] md:h-[30rem] object-contain" poster={QSleeveImage} onClick={handleToggle}>
-          <source src={QSleeveVideo} type="video/mp4" />
-
-        </video>
+      <div className='w-full width  md:px-10 2xl:px-20 flex flex-col items-center justify-center' ref={VideoRef}>
+      <VideoComponent image={QSleeveImage} video={QSleeveVideo}  />
       </div>
+   
       <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center my-10 gap-2'>
         <TitleContent title="Partners" content="We have established valuable partnerships with a wide range of industry experts, enabling us to deliver exceptional solutions to our clients by leveraging their expertise and innovative approaches." />
         <div className="mx-auto  md:px-5 2xl:px-8">

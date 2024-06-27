@@ -49,7 +49,7 @@ const  MainHerosection = (props) =>{
           <p className="w-full max-w-xl text-center text-white font-RobotoRegular text-xs md:text-sm mt-4">
             {props.content}
           </p>
-          <div className=" flex justify-center text-center mt-10">
+          <div className=" flex justify-center text-center mt-10" onClick={props.MainHerosection}>
                   <HoverBorderButton
                     containerClassName="rounded-full"
                     as="button"

@@ -14,7 +14,9 @@ import global from '../../src/Images/globe.png';
 import arrow1 from '../../src/Images/arrow1.png';
 import arrow2 from '../../src/Images/arrow2.png';
 import Profilecomponent from '../Components/Profilecomponent';
-
+import VideoComponent from '../Components/VideoComponent';
+import BackgroundGradient from '../Images/BackgroundGradient.png'
+import BackgroundGradientSmall from '../Images/BackgroundGradientSmall.png'
 
 
 
@@ -22,19 +24,20 @@ import Profilecomponent from '../Components/Profilecomponent';
 
 
 export default function Aboutus() {
-  const backgroundImageBig = generateSvgDataUrl("#060606", 70, 70);
-  const backgroundImageSmall = generateSvgDataUrl("#060606", 50, 50);
-  const [backgroundImage, setBackgroundImage] = useState(backgroundImageSmall);
+  // const backgroundImageBig = generateSvgDataUrl("#060606", 70, 70);
+  // const backgroundImageSmall = generateSvgDataUrl("#060606", 50, 50);
+  // const [backgroundImage, setBackgroundImage] = useState(backgroundImageSmall);
+  const [backgroundImage, setBackgroundImage] = useState(``);
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const updateBackgroundImage = () => {
       const screenWidth = window.innerWidth;
 
-      if (screenWidth >= 1536) {
-        setBackgroundImage(backgroundImageBig);
+      if (window.innerWidth < 640) {
+        setBackgroundImage(`url(${BackgroundGradientSmall})`);
       } else {
-        setBackgroundImage(backgroundImageSmall);
+        setBackgroundImage(`url(${BackgroundGradient})`);
       }
     };
 
@@ -50,8 +53,8 @@ export default function Aboutus() {
 
 
   return (
-    <div className='w-full  flex flex-col gap-0 items-center justify-center  bg-black'
-      style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className='w-full  flex flex-col gap-0 items-center justify-center bg-black'>
+      <div className='w-full width flex flex-col gap-0 items-center justify-center bg-contain bg-repeat'  style={{  backgroundImage: backgroundImage }}>
 
 
       <Header id={2} />
@@ -60,7 +63,7 @@ export default function Aboutus() {
         <HeroSection title1="Crafting Tomorrow's"
           title2="Innovations Today" content="At Quantum AI Global, we lead the quantum computing revolution, fusing quantum technology with AI innovation. Our mission is to redefine industries by solving complex challenges, and our experts are at the forefront of this transformation. Join us as we shape the future of computing and artificial intelligence." />
       </div>
-      <div className='w-full width flex flex-col items-center justify-center md:px-10 gap-6 mb-10 relative'>
+      <div className='w-full width flex flex-col items-center justify-center  md:px-10 2xl:px-20 gap-6 mb-10 relative'>
         <div className='w-full h-auto md:h-[33rem] p-3 width grid md:grid-cols-2 justify-items-center   items-center  '>
           <div className='w-[90%] h-full flex flex-col justify-center items-center   p-3'>
             <div className='w-full  flex flex-col items-center justify-center gap-1'>
@@ -100,12 +103,7 @@ export default function Aboutus() {
       </div>
       <div className='w-full width  flex flex-col items-center justify-center my-10 gap-6'>
         <TitleContent title="Our Journey" content="Founded by a team of experts in Quantum computing, Al and related fields, Quantum Al Global is committed to delivering innovative solutions that meet the unique needs of our clients. Our team combines deep expertise in quantum and AI technologies with a passion for solving complex problems and delivering results. Our team of experts combines deep expertise in quantum computing and artificial intelligence to deliver customized solutions for our clients." />
-        <div className="w-full h-[25rem] md:h-[35rem] flex items-center  videoBackground justify-center py-3 my-6 ">
-          <video controls autoPlay={toggle} muted className="w-full h-[20rem] md:w-[60rem] md:h-[30rem] object-contain" poster={QSleeveImage} onClick={handleToggle}>
-            <source src={QSleeveVideo} type="video/mp4" />
-
-          </video>
-        </div>
+       <VideoComponent image={QSleeveImage} video={QSleeveVideo}/>
       </div>
       <div className='w-full width  flex flex-col items-center justify-center my-10 gap-6 relative '>
         <TitleContent title="Our portfolio of products includes" content="" />
@@ -180,6 +178,7 @@ export default function Aboutus() {
       </div>
 
       <Footer showpage={true} />
+    </div>
     </div>
 
 

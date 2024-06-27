@@ -121,7 +121,7 @@ const Corousel = ({ className, Data }) => {
         className
       )}
     >
-      <motion.div className="relative   p-2 w-[20rem] h-[20rem] flex items-center justify-center">
+      <motion.div className="relative   p-2 w-[15rem] md:w-[20rem] h-[20rem] flex items-center justify-center">
         <motion.button
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -132,7 +132,7 @@ const Corousel = ({ className, Data }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.8 }}
 
-          className=" w-[4rem] h-[4rem] rounded-[50%] flex items-center justify-center bg-black/70 absolute -left-28 z-10"
+          className=" w-[4rem] h-[4rem] rounded-[50%] flex items-center justify-center bg-black/70 absolute -left-16 md:-left-28 z-10"
           onClick={prevBtn}
         >
           <FaArrowLeft size={20} color="#1B99D4"/>
@@ -140,7 +140,7 @@ const Corousel = ({ className, Data }) => {
 
         <AnimatePresence initial={false}>
           <motion.div
-            className="w-[20rem] h-[20rem] absolute "
+            className="w-[15rem] md:w-[20rem] h-[20rem] sm:block hidden absolute "
             key={LeftId}
             variants={variants}
             initial={FlowDirection ? 'center' : 'leftHidden'}
@@ -153,7 +153,7 @@ const Corousel = ({ className, Data }) => {
             </Card>
           </motion.div>
           <motion.div
-            className="w-[20rem] h-[20rem] absolute "
+            className="w-[15rem] md:w-[20rem] h-[20rem]  absolute "
             variants={variants}
             key={CenterId}
             initial={FlowDirection ? 'right' : 'left'}
@@ -165,7 +165,7 @@ const Corousel = ({ className, Data }) => {
             </Card>
           </motion.div>
           <motion.div
-            className="w-[20rem] h-[20rem] absolute"
+            className="w-[15rem] md:w-[20rem] h-[20rem] sm:block hidden absolute"
             key={RightId}
             variants={variants}
             initial={FlowDirection ? 'rightHidden' : 'center'}
@@ -187,7 +187,7 @@ const Corousel = ({ className, Data }) => {
           }}
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.8}}
-          className=" w-[4rem] h-[4rem] rounded-[50%] flex items-center justify-center bg-black/70 absolute -right-28 z-10"
+          className=" w-[4rem] h-[4rem] rounded-[50%] flex items-center justify-center bg-black/70 absolute -right-16 md:-right-28 z-10"
           onClick={nextBtn}
         >
          <FaArrowRight size={20} color="#1B99D4"/>

@@ -10,6 +10,9 @@ import { FiLinkedin } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import logoSVG from '../../src/Images/QuantumAILogo.png';
 import { generateSvgDataUrl } from "./Dimensions";
+import { FaXTwitter } from "react-icons/fa6";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FiYoutube } from "react-icons/fi";
 
 export default function Footer(props) {
   const backgroundImageBig = generateSvgDataUrl("#060606",70,70);
@@ -38,16 +41,10 @@ export default function Footer(props) {
   };
 
   const navigate = useNavigate();
-  const handleEmailClick = () => {
-    window.location.href = 'mailto:info@qulabs.ai';
-  };
+ 
 
-  const handlePhoneClick = () => {
-    window.location.href = 'tel:+916281684342';
-  };
-
-  const openInstagramProfile = () => {
-    window.open('https://www.instagram.com/qulabssoftware/', '_blank');
+  const openYoutubeProfile = () => {
+    window.open('https://youtube.com/@quantum_ai_global?si=_6-j9dasMGM6lEDj', '_blank');
   };
 
   const openTwitterProfile = () => {
@@ -55,7 +52,7 @@ export default function Footer(props) {
   };
 
   const openLinkedInProfile = () => {
-    window.open('https://www.linkedin.com/company/qulabs-software-india/', '_blank');
+    window.open('https://www.linkedin.com/company/quantum-ai-global-company/mycompany/', '_blank');
   };
   return (
     <div className={`flex flex-col  items-center justify-center w-full h-auto bg-[#000000] `}>
@@ -196,6 +193,12 @@ export default function Footer(props) {
                         <IoCallOutline size={18} color="#1B99D4" />
                         <span className="align-middle">+1 (732) 227 4433</span>
                       </div>
+                    </li>
+                    <li className="flex items-center justify-start gap-2.5 mt-3">
+                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video" onClick={openLinkedInProfile}><SlSocialLinkedin color="#1B99D4" size={20}/></div>
+                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video" onClick={openTwitterProfile}> <FaXTwitter color="#1B99D4" size={21}/></div>
+                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video" onClick={openYoutubeProfile}><FiYoutube color="#1B99D4" size={20}/></div>
+                       
                     </li>
                   </ul>
                 </div>

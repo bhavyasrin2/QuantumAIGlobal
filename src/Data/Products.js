@@ -1,9 +1,9 @@
 export const quantumProducts = [
-    { name: "QSleeve", image: require("../../src/Images/Q-SLEEVE LOGO.png") },
+    { name: "Qsleeve", image: require("../../src/Images/Q-SLEEVE LOGO.png") },
     { name: "ChecQ", image: require("../../src/Images/CHEC-Q.png") },
     { name: "QMag", image: require("../../src/Images/Q-Mag.png") },
     { name: "QMemory", image: require("../../src/Images/Q MEMORY LOGO.png") },
-    { name: "QFoliopro", image: require("../../src/Images/Q-folio pro logo.png") },
+    { name: "Q-Folio Pro", image: require("../../src/Images/Q-folio pro logo.png") },
     { name: "EPS-QKD", image: require("../../src/Images/QKD LOGO.png") },
     { name: "QubitIQ", image: require("../../src/Images/QUBIT-IQ LOGO.png") },
 ];
@@ -11,13 +11,13 @@ export const quantumProducts = [
 export const aiProducts = [
     { name: "CL(AI)MS", image: require("../../src/Images/CLAIMS LOGO.png") },
     { name: "HealMed", image: require("../../src/Images/HEAL MED LOGO.png") },
-    { name: "LABAI", image: require("../../src/Images/LAB-AI LOGO.png") },
+    { name: "LAB-AI", image: require("../../src/Images/LAB-AI LOGO.png") },
 ];
 
 export const products = [
   {
     id: 1,
-    title: "QSleeve",
+    title: "Qsleeve",
     description:
       "The imminent threat of quantum computing to our communication security has prompted the development of an encryption wrapper based on quantum-resistant Post Quantum Cryptography algorithms.",
    

@@ -32,7 +32,7 @@ export default function Profilecomponent(props) {
             </div>
             <div
               onClick={(event) => openLink(props.linkedin, event)}
-              className="2xl:w-[4rem] 2xl:h-[4rem]  rounded-full  w-[2.5rem] h-[2.5rem]  videoBackground flex items-center justify-center shadow-lg shadow-gray-400 "
+              className="2xl:w-[4rem] 2xl:h-[4rem]  rounded-full cursor-pointer w-[2.5rem] h-[2.5rem]  videoBackground flex items-center justify-center shadow-lg shadow-gray-400 "
             >
               <SlSocialLinkedin size={20} color="#1B99D4" className="hidden md:block" />
               <SlSocialLinkedin size={12} color="#1B99D4" className="block md:hidden" />
