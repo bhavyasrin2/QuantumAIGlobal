@@ -165,8 +165,13 @@ const CardButton1=({className,children,hovered,link})=>{
 const CardButton2=({className,children,hovered,name})=>{
   
   const handleCardClick = (id) => {
-    const url = `/Products/${id}`;
-    window.open(url, '_blank'); // Open in a new tab or window
+    if (id !== "") {
+      const url = `/Products/${id}`;
+      window.open(url, '_blank'); // Open in a new tab or window
+    } else {
+      console.log('Invalid ID: Cannot open new window'); // Optional: Log or handle the case where id is empty
+    }// Open in a new tab or window
+   
     };
     return(
         <div

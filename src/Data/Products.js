@@ -1,17 +1,17 @@
 export const quantumProducts = [
-    { name: "Qsleeve", image: require("../../src/Images/Q-SLEEVE LOGO.png") },
-    { name: "ChecQ", image: require("../../src/Images/CHEC-Q.png") },
-    { name: "QMag", image: require("../../src/Images/Q-Mag.png") },
-    { name: "QMemory", image: require("../../src/Images/Q MEMORY LOGO.png") },
-    { name: "Q-Folio Pro", image: require("../../src/Images/Q-folio pro logo.png") },
-    { name: "EPS-QKD", image: require("../../src/Images/QKD LOGO.png") },
-    { name: "QubitIQ", image: require("../../src/Images/QUBIT-IQ LOGO.png") },
+    { title: "Qsleeve",name: "Qsleeve", image: require("../../src/Images/Q-SLEEVE LOGO.png"),  },
+    { title: "ChecQ",name:"", image: require("../../src/Images/CHEC-Q.png") },
+    { title: "QMag",name:"", image: require("../../src/Images/Q-Mag.png") },
+    { title: "QMemory",name:"", image: require("../../src/Images/Q MEMORY LOGO.png") },
+    { title: "Q-Folio Pro",name:"", image: require("../../src/Images/Q-folio pro logo.png") },
+    { title:"EPS-QKD",name:"", image: require("../../src/Images/QKD LOGO.png") },
+    { title: "QubitIQ",name:"", image: require("../../src/Images/QUBIT-IQ LOGO.png") },
 ];
 
 export const aiProducts = [
-    { name: "CL(AI)MS", image: require("../../src/Images/CLAIMS LOGO.png") },
-    { name: "HealMed", image: require("../../src/Images/HEAL MED LOGO.png") },
-    { name: "LAB-AI", image: require("../../src/Images/LAB-AI LOGO.png") },
+    { title: "CL(AI)MS",name:"", image: require("../../src/Images/CLAIMS LOGO.png") },
+    { title: "HealMed",name:"", image: require("../../src/Images/HEAL MED LOGO.png") },
+    { title: "LAB-AI",name:"", image: require("../../src/Images/LAB-AI LOGO.png") },
 ];
 
 export const products = [
@@ -21,15 +21,15 @@ export const products = [
     description:
       "The imminent threat of quantum computing to our communication security has prompted the development of an encryption wrapper based on quantum-resistant Post Quantum Cryptography algorithms.",
    
-    name: "QSleeve",
+    name: "Qsleeve",
   },
   {
     id: 2,
-    title: "Qubit-IQ",
+    title: "QubitIQ",
     description:
       "In the cutting-edge world of technology, quantum computing is revolutionizing data processing, and we propose an intelligent software system that combines machine intelligence and quantum computing to process diverse data types.",
    
-    name: "QubitIQ",
+    name: "",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const products = [
     description:
       "EPS-based QKD Demonstrator Box for Academia Kick start your experimentation in quantum communication with confidence using our EPS-based QKD Demonstrator Box, an essential tool for understanding quantum entanglement and encryption.",
     
-     name: "EPS-QKD",
+     name: "",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const products = [
     description:
       "We leverage Quantum for Finance. Our solution demonstrates how quantum computing can revolutionize portfolio optimization,bringing unprecedented speed and efficiency.",
    
-    name: "QFoliopro",
+    name: "",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ export const products = [
     description:
       "HealMed is Our AI based Clinical Decision Support System (CDSS) that automates patient mental health assessments, stratifies their responses and helps in improving patient outcomes.",
    
-    name: "HealMed",
+    name: "",
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ export const products = [
     description:
       "Enables the customers to search and review policies, procedures and provide risk assessments to our clients, all different kind of compliances required to be adhered to like HIPAA guidelines.",
    
-    name: "LABAI"
+    name: ""
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ export const products = [
     description:
       "Appeals patient-specific, Denials-specific, and payer-specific appeals letters using our Al. Our system sends appeal letters to the appropriate parties based on each individual’s circumstances, with a 99% accuracy rate based on our Al evaluation.",
    
-    name: "CL(AI)MS"
+    name: ""
   },
 ];
 

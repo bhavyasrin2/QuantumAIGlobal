@@ -53,8 +53,12 @@ export default function Productspicture() {
     const navigate = useNavigate();
 
    const handleCardClick = (id) => {
-    const url = `/Products/${id}`;
-    window.open(url, '_blank'); // Open in a new tab or window
+    if (id !== "") {
+      const url = `/Products/${id}`;
+      window.open(url, '_blank'); // Open in a new tab or window
+    } else {
+      console.log('Invalid ID: Cannot open new window'); // Optional: Log or handle the case where id is empty
+    }// Open in a new tab or window // Open in a new tab or window
     };
     
    
@@ -127,7 +131,7 @@ export default function Productspicture() {
                               alt={product.name}
                               className="object-fill cursor-pointer"
                             />
-                            <p className={`text-white  text-center w-full ${hoveredIndex1=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.name}</p>
+                            <p className={`text-white  text-center w-full ${hoveredIndex1=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
                           
                           </div>
                        
@@ -173,7 +177,7 @@ export default function Productspicture() {
                               alt={product.name}
                               className="object-fill cursor-pointer"
                             />
-                            <p className={`text-white  text-center w-full ${hoveredIndex2=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.name}</p>
+                            <p className={`text-white  text-center w-full ${hoveredIndex2=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
                           
                           </div>
                        
