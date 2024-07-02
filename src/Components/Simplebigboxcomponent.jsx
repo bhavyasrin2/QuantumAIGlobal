@@ -1,15 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export default function Simplebigboxcomponent(props) {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <div
-            className="flex flex-col items-center justify-center md:px-3 md:py-4 px-1 py-3 border-[0.06rem] border-[#444D61] rounded-lg md:rounded-2xl bg-black   md:w-[24rem] md:h-[16rem] 2xl:w-[36rem] 2xl:h-[20rem] w-[19rem] h-[18rem]"
+            className={`flex flex-col items-center justify-center md:px-6 px-2 py-8 md:py-4 border-[0.06rem]  rounded-xl md:rounded-2xl bg-black   md:w-[24rem] md:h-[18rem] 2xl:w-[22rem] 2xl:h-[20rem]  w-[19rem] h-[16rem] z-10 ${isHovered? 'border-[#1B99D4]' : 'border-[#444D61]'}`}  onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
-            <div className="w-full h-full flex flex-col items-center justify-center md:gap-2 gap-1">
+            <div className="w-full h-full flex flex-col items-center justify-start md:gap-0 gap-1">
 
 
-            <div className='h-[10%] p-2 flex items-center justify-center w-full font-opensans font-bold text-[#1B99D4] text-center text-base xl:text-xl 2xl:text-2xl my-2'>{props.name}</div>
-            <div className='h-[75%]  w-full px-3 pb-2 flex flex-wrap justify-center font-opensans font-normal text-white text-justify text-sm 2xl:text-lg'>
+            <div className='h-[10%] 2xl:h-[15%] px-3 flex items-start  justify-start w-full font-RobotoBold font-bold text-[#1B99D4] text-left text-[1rem] md:text-xl 2xl:text-2xl mb-4 md:mt-4'>{props.name}</div>
+            <div className=' w-full px-3 flex flex-wrap  justify-center font-RobotoRegular font-normal text-white text-left text-xs md:text-sm '>
            {props.content}
             </div>
 

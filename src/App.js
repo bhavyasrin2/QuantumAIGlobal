@@ -34,15 +34,15 @@ function App() {
       <Route path="/Partners" element={<Partners />} />
       <Route path="/Ourip" element={<Ourips />} />
       <Route path="/Resources" element={<Resources />} />
-      <Route path="/Products/QSleeve" element={<QSleeve />} />
-      <Route path="/Products/LabAI" element={<LabAI />} />
+      <Route path="/Products/Qsleeve" element={<QSleeve />} />
+      <Route path="/Products/LAB-AI" element={<LabAI />} />
       <Route path="/Products/HealMed" element={<HealMed />} />
       <Route path="/Products/QubitIQ" element={<QubitIQ />} />
       <Route path="/Products/QMag" element={<QMag />} />
       <Route path="/Products/QMemory" element={<QMemory  />} />
-      <Route path="/Products/QFolioPro" element={<QFolioPro />} />
-      <Route path="/Products/QKD" element={<QKD />} />
-      <Route path="/Products/ClAIms" element={< ClAIms />} />
+      <Route path="/Products/Q-Folio Pro" element={<QFolioPro />} />
+      <Route path="/Products/EPS-QKD" element={<QKD />} />
+      <Route path="/Products/CL(AI)MS" element={< ClAIms />} />
       
       <Route path="/Products/ChecQ" element={<ChecQ />} />
 

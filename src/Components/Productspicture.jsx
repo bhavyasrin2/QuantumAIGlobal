@@ -38,23 +38,27 @@ export default function Productspicture() {
   
     const totalImages1 = quantumProducts.length;
     const totalImages2 = aiProducts.length;
-    const angleIncrement1 = 240 / (totalImages1 - 1);
+    const angleIncrement1 = 200 / (totalImages1 - 1);
     const angleIncrement2 = 90 / (totalImages2 - 1);
 
     const [radius1, setradius1] = useState(215);
     const [radius2, setradius2] = useState(155);
     const [centerImageSize1, setcenterImageSize1] = useState(270);
     const [centerImageSize2, setcenterImageSize2] = useState(160);
-    const [surroundingQuantumWidth, setsurroundingQuantumWidth] = useState(74);
-    const [surroundingQuantumHeight, setsurroundingQuantumHeight] = useState(74.5);
+    const [surroundingQuantumWidth, setsurroundingQuantumWidth] = useState(120);
+    const [surroundingQuantumHeight, setsurroundingQuantumHeight] = useState(120.5);
     const [enlargedImageSizeWidth, setenlargedImageSizeWidth] = useState(95);
     const [enlargedImageSizeHeight, setenlargedImageSizeHeight] = useState(95.6);
 
     const navigate = useNavigate();
 
    const handleCardClick = (id) => {
-    const url = `/Products/${id}`;
-    window.open(url, '_blank'); // Open in a new tab or window
+    if (id !== "") {
+      const url = `/Products/${id}`;
+      window.open(url, '_blank'); // Open in a new tab or window
+    } else {
+      console.log('Invalid ID: Cannot open new window'); // Optional: Log or handle the case where id is empty
+    }// Open in a new tab or window // Open in a new tab or window
     };
     
    
@@ -64,14 +68,14 @@ export default function Productspicture() {
         const screenWidth = window.innerWidth;
   
         if (screenWidth >= 1536) {
-          setradius1(340);
-          setradius2(250);
-          setcenterImageSize1(400);
-          setcenterImageSize2(250);
-          setsurroundingQuantumWidth(105.334);
-          setsurroundingQuantumHeight(106);
-          setenlargedImageSizeWidth(125.334);
-          setenlargedImageSizeHeight(126);
+          setradius1(360);
+          setradius2(260);
+          setcenterImageSize1(450);
+          setcenterImageSize2(270);
+          setsurroundingQuantumWidth(120.334);
+          setsurroundingQuantumHeight(151.2);
+          setenlargedImageSizeWidth(140);
+          setenlargedImageSizeHeight(176.5);
         } else {
           setradius1(340);
           setradius2(250);
@@ -99,7 +103,7 @@ export default function Productspicture() {
                     }} alt="Quantum Circle" />
                     <p className=' absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-RobotoBold  text-white font-extrabold text-5xl '>Quantum</p>
                     {quantumProducts.map((product, index) => {
-                        const angle = 150 + index * angleIncrement1;
+                        const angle = 170 + index * angleIncrement1;
                         const x = radius1 * Math.cos((angle * Math.PI) / 180);
                         const y = radius1 * Math.sin((angle * Math.PI) / 180);
                         return (
@@ -127,7 +131,7 @@ export default function Productspicture() {
                               alt={product.name}
                               className="object-fill cursor-pointer"
                             />
-                            <p className={`text-white  text-center w-full ${hoveredIndex1=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.name}</p>
+                            <p className={`text-white  text-center w-full ${hoveredIndex1=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
                           
                           </div>
                        
@@ -173,7 +177,7 @@ export default function Productspicture() {
                               alt={product.name}
                               className="object-fill cursor-pointer"
                             />
-                            <p className={`text-white  text-center w-full ${hoveredIndex2=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.name}</p>
+                            <p className={`text-white  text-center w-full ${hoveredIndex2=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
                           
                           </div>
                        

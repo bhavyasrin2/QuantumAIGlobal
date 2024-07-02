@@ -27,26 +27,50 @@ export const useDimensions = (ref) => {
   return dimensions;
 };
 
+
 export const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    backgroundColor: "rgba(0,0,0,1)",
+  open: {
+    backgroundColor: 'rgba(0,0,0,0.9)',
+    y: 0, // Set y to 0 to start from the top
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 20,
       restDelta: 2,
+      damping: 25,
+      duration: 0.4,
     },
-  }),
+  },
   closed: {
-    clipPath: "polygon(20px 20px, 70px 20px, 70px 70px, 20px 70px)",
+    backgroundColor: 'rgba(0,0,0,0.9)',
+    y: '-100%', // Move the sidebar out of view to the top
     transition: {
-      type: "keyframes",
-      duration: 0.1, 
-      ease: "easeInOut", 
-     
+      type: 'spring',
+      stiffness: 20,
+      restDelta: 2,
+      damping: 25,
+      duration: 0.4,
     },
   },
 };
+  // open: (height = 1000) => ({
+  //   clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  //   backgroundColor: "rgba(0,0,0,1)",
+  //   transition: {
+  //     type: "spring",
+  //     stiffness: 20,
+  //     restDelta: 2,
+  //   },
+  // }),
+  // closed: {
+  //   clipPath: "polygon(20px 20px, 70px 20px, 70px 70px, 20px 70px)",
+  //   transition: {
+  //     type: "keyframes",
+  //     duration: 0.1, 
+  //     ease: "easeInOut", 
+     
+  //   },
+  // },
+
 
 export const variants = {
     open: {

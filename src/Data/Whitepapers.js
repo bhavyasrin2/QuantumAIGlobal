@@ -5,21 +5,21 @@ export const whitepapers = [
         name: "LABAI",
         img: require("../../src/Images/LAB-AI.png"),
         content: "Our Compliance Management System is driven by Generative AI with a bold vision: to usher healthcare organizations into an era of effortless regulatory compliance and streamlined document management. With a robust and all-encompassing solution, product empowers healthcare institutions",
-        // link:require("../../src/Whitepapers/HEALMED White Paper.pdf"),
+        link:require("../../src/Pdf/LAB AI White Paper.pdf"),
     },  
     {
         id: 2,
         name: "HEALMED",
         img: require("../../src/Images/HEAL MED.png"),
         content: "An AI-based Clinical Decision Support System (CDSS) that is set to transform the landscape of mental health care. HealMed It's not just a software; it's a beacon of hope for mental health care. The landscape of mental health care delivery is fraught with challenges, from overwhelming",
-        // link:require("../../src/Whitepapers/HEALMED White Paper.pdf"),
+        link:require("../../src/Pdf//HEALMED White Paper.pdf"),
     },
     {
         id: 3,
         name: "QSLEEVE",
         img: require("../../src/Images/Q-SLEEVE.png"),
         content: "QSleeve is developed keeping in mind about the future of secured communication. Advent of quantum algorithms and the threats emerging with them in the paradigm of communication and data security, a product whic h will secure the data of organization.",
-        // link:require("../../src/Whitepapers/QSLEEVE White Paper.pdf"),
+        link:require("../../src/Pdf/QSLEEVE White Paper.pdf"),
     },
 ]
 
