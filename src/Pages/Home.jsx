@@ -4,7 +4,7 @@ import Footer from "../Components/Footer"
 import { generateSvgDataUrl } from "../Components/Dimensions";
 import { MainHerosection } from '../Components/HeroSection';
 import QSleeveImage from "../Images/videothumbnail.jpg";
-import QSleeveVideo from "../Videos/QSleeveVideo.mp4";
+import QAIG from '../Videos/QAIG- BROCHURE.mp4';
 import TitleContent from '../Components/TitleContent';
 import Partnerslogocontainer from '../Components/Partnerslogocontainer';
 import Form from '../Components/Form';
@@ -112,7 +112,7 @@ export default function Home() {
         ></div>
       </div>
       <div className='w-full width  md:px-10 2xl:px-20 flex flex-col items-center justify-center' ref={VideoRef}>
-      <VideoComponent image={QSleeveImage} video={QSleeveVideo}  />
+      <VideoComponent image={QSleeveImage} video={QAIG}  />
       </div>
    
       <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center my-10 gap-2'>

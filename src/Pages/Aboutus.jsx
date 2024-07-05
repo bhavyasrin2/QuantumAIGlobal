@@ -4,7 +4,7 @@ import Footer from "../Components/Footer"
 import HeroSection from '../Components/HeroSection';
 import { generateSvgDataUrl } from "../Components/Dimensions";
 import QSleeveImage from "../Images/videothumbnail.jpg";
-import QSleeveVideo from "../Videos/QSleeveVideo.mp4";
+import About from "../Videos/AboutUs.mp4";
 import TitleContent from '../Components/TitleContent';
 import Simplebigboxcomponent from '../Components/Simplebigboxcomponent';
 import BigboxComponent from '../Components/BigboxComponent';
@@ -103,7 +103,7 @@ export default function Aboutus() {
       </div>
       <div className='w-full width  flex flex-col items-center justify-center my-10 gap-6'>
         <TitleContent title="Our Journey" content="Founded by a team of experts in Quantum computing, Al and related fields, Quantum Al Global is committed to delivering innovative solutions that meet the unique needs of our clients. Our team combines deep expertise in quantum and AI technologies with a passion for solving complex problems and delivering results. Our team of experts combines deep expertise in quantum computing and artificial intelligence to deliver customized solutions for our clients." />
-       <VideoComponent image={QSleeveImage} video={QSleeveVideo}/>
+       <VideoComponent image={QSleeveImage} video={About}/>
       </div>
       <div className='w-full width  flex flex-col items-center justify-center my-10 gap-6 relative '>
         <TitleContent title="Our portfolio of products includes" content="" />
