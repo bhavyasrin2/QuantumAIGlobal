@@ -138,9 +138,9 @@ export default function Footer(props) {
         )
       }
       <div className="width w-full flex flex-col items-center justify-center ">
-        <div className="md:w-[75%]   w-[80%] flex flex-row md:gap-24 gap-10 items-center justify-center">
-          <div className=" md:w-[16rem] md:h-[16rem] w-[9rem] h-[8rem]  flex items-center justify-center ">
-            <img className="md:w-[15.3rem] md:h-[15.3rem] w-[10rem] h-[10rem] " src={logoSVG} alt="Quantum Logo" />
+        <div className="md:w-[75%]   w-[80%] flex flex-row md:gap-24 gap-2 items-center justify-center">
+          <div className=" md:w-[16rem] md:h-[16rem] w-[9rem] h-[9rem] flex items-center justify-center ">
+            <img className="md:w-[15.3rem] md:h-[15.3rem] w-full h-full" src={logoSVG} alt="Quantum Logo" />
           </div>
           <div className="w-[60%]  flex md:flex-row flex-col  md:gap-9 items-start justify-center font-opensans ">
             <div className="w-full flex md:gap-9  items-start justify-center">
@@ -155,7 +155,7 @@ export default function Footer(props) {
                   <li  onClick={() => {
                       scrollToTop();
                       navigate("/Products/MarketFit")
-                    }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">MarketFit</li>
+                    }} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Market Fit</li>
                   <li onClick={() => {scrollToTop();navigate("/Ourip")}} className="mb-1 hover:text-[#ffffff] cursor-pointer text-[#798397]">Our IP's</li>
                 </ul>
               </div>
@@ -195,9 +195,9 @@ export default function Footer(props) {
                       </div>
                     </li>
                     <li className="flex items-center justify-start gap-2.5 mt-3">
-                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video" onClick={openLinkedInProfile}><SlSocialLinkedin color="#1B99D4" size={20}/></div>
-                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video" onClick={openTwitterProfile}> <FaXTwitter color="#1B99D4" size={21}/></div>
-                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video" onClick={openYoutubeProfile}><FiYoutube color="#1B99D4" size={20}/></div>
+                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video cursor-pointer" onClick={openLinkedInProfile}><SlSocialLinkedin color="#1B99D4" size={20}/></div>
+                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video cursor-pointer" onClick={openTwitterProfile}> <FaXTwitter color="#1B99D4" size={21}/></div>
+                      <div className="flex items-center justify-center w-[1.5rem] h-[1.5rem] rounded-[50%] video cursor-pointer" onClick={openYoutubeProfile}><FiYoutube color="#1B99D4" size={20}/></div>
                        
                     </li>
                   </ul>
@@ -207,15 +207,15 @@ export default function Footer(props) {
           </div>
         </div>
         <div className="flex items-center justify-center w-full  border-t-2 border-[#1B99D4] bg-black">
-        <div className="width md:w-[70%] w-[80%]  mt-[0.1rem] flex items-center justify-between  ">
-          <div className="flex w-[50%] px-2 sm:px-0">
-            <div className="text-[#ffffff] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.3rem]">Copyright © 2023 I</div>
-            <div className="text-[#1B99D4] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.3rem]">Quantum AI Global</div>
+        <div className="width md:w-[70%] w-full  mt-[0.1rem] flex items-center justify-between  ">
+          <div className="flex w-[50%] px-2 sm:px-1">
+            <div className="text-[#ffffff] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.45rem]">Copyright © 2023 I</div>
+            <div className="text-[#1B99D4] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.45rem]">Quantum AI Global</div>
 
           </div>
           <div className="flex items-center justify-end w-[50%]">
-            <div className="text-[#ffffff] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.3rem]">All Rights Reserved</div>
-            <div className="text-[#1B99D4] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.3rem]">| Terms and Conditions | Privacy Policy</div>
+            <div className="text-[#ffffff] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.45rem]">All Rights Reserved</div>
+            <div className="text-[#1B99D4] font-opensans 2xl:text-xs md:text-[0.6rem] text-[0.45rem]">| Terms and Conditions | Privacy Policy</div>
 
           </div>
          
@@ -228,4 +228,3 @@ export default function Footer(props) {
     </div>
   );
 }
-

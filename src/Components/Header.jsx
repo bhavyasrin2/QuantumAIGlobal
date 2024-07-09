@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import HoverBorderButton from "./HoverBorderButton";
 import { FaBars } from "react-icons/fa";
@@ -19,6 +19,26 @@ export default function Header(props) {
   const [Software, setSoftware] = useState(false);
   const [showCompanySubmenu, setShowCompanySubmenu] = useState(false);
   const [showProductSubmenu, setShowProductSubmenu] = useState(false);
+
+
+  const handleClickOutside = (event) => {
+    if (containerRef.current && !containerRef.current.contains(event.target)) {
+      setShowMenu(false);
+    }
+  };
+
+  // Add event listener on component mount to handle clicks outside the menu
+  useEffect(() => {
+    if (showMenu) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showMenu]);
 
   const toggleCompanySubmenu = () => {
     setShowCompanySubmenu(!showCompanySubmenu);
@@ -237,13 +257,14 @@ export default function Header(props) {
 
         </div>
         {showMenu && (
-          <motion.div className={`absolute top-[5rem] pl-10  rounded-lg  w-[90%] ${showMenu ? 'menu-slide' : ''} z-50 h-auto bg-[#000000] border-[0.03rem] border-[#798397]  text-white py-6 `} 
-          animate={showMenu ? "open" : "closed"}>
-            <motion.ul className="flex flex-col items-start  justify-center w-full h-full text-white gap-3 " variants={variants}>
-           
+          <motion.div className={`absolute top-[5rem] pl-10  rounded-lg  w-[98%] ${showMenu ? 'menu-slide' : ''} z-50 h-auto bg-[#000000] border-[0.03rem] border-[#798397]  text-white py-6 `}
+            ref={containerRef}
+            animate={showMenu ? "open" : "closed"}>
+            <motion.ul className="flex flex-col items-start  justify-center w-[95%] h-full text-white gap-3 " variants={variants}>
+
               <motion.li
                 onClick={() => {
-                  
+
                   scrollToTop();
                   navigate("/")
                 }}
@@ -266,7 +287,7 @@ export default function Header(props) {
                     onClick={() => {
                       // handleNavigation('/Company/Aboutus');
                       scrollToTop();
-                     navigate('/Company/Aboutus');
+                      navigate('/Company/Aboutus');
                     }}
                     className="flex items-start justify-center gap-2 px-3 py-2 font-RobotoMedium text-[#ffffff] cursor-pointer hover:text-[#798397]  text-xs"
                   >
@@ -316,7 +337,7 @@ export default function Header(props) {
                   </p>
                 </li>
               )}
-              
+
               <motion.li
                 onClick={() => {
                   // handleNavigation("/Services")

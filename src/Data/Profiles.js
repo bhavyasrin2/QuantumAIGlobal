@@ -115,7 +115,7 @@ export const directorsprofile=[
       {
         id: 3,
         name: "Dr Ravi Sarepalli",
-        img: require("../../src/Images/ACHARYA.png"),
+        img: require("../../src/Images/RAVISARIPALLE.png"),
         linkedin: "https://www.linkedin.com/in/ravisaripalle/",
         title:"",
        

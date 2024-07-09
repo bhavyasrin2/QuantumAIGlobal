@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Header from '../Components/Header';
 import Footer from "../Components/Footer"
 import { generateSvgDataUrl } from "../Components/Dimensions";
@@ -28,7 +28,7 @@ export default function Home() {
   const VideoRef = useRef(null);
   const [toggle, setToggle] = useState(false);
 
-  
+
   const [backgroundImage, setBackgroundImage] = useState(``);
 
   useEffect(() => {
@@ -72,62 +72,64 @@ export default function Home() {
 
   return (
     <div className='w-full  flex flex-col gap-0 items-center justify-center bg-black'>
-      <div className='w-full width flex flex-col gap-0 items-center justify-center bg-contain bg-repeat'  style={{  backgroundImage: backgroundImage }}>
+      <div className='w-full width flex flex-col gap-0 items-center justify-center bg-contain bg-repeat' style={{ backgroundImage: backgroundImage }}>
 
 
-      <Header id={1} />
+        <Header id={1} />
 
-      <div className='w-full h-[25rem] '>
-        <MainHerosection title1="Welcome To"
-          title2="Quantum AI Global" content="Leading the way in Quantum & AI Solutions" MainHerosection={scrollToVideo} />
-      </div>
-      <div className='w-full width flex flex-col items-center justify-center md:px-10 2xl:px-20 gap-6 mb-10 relative'>
-        <div className='w-full h-auto md:h-[40rem] p-3 width grid md:grid-cols-2 justify-items-center   items-center  '>
-          <div className='w-[90%] h-full flex flex-col justify-center items-center   p-3'>
-            <div className='w-full  flex flex-col items-center justify-center gap-1'>
+        <div className='w-full h-[25rem] '>
+          <MainHerosection title1="Welcome To"
+            title2="Quantum AI Global" content="Leading the way in Quantum & AI Solutions" MainHerosection={scrollToVideo} />
+        </div>
+        <div className='w-full width flex flex-col items-center justify-center md:px-10 2xl:px-20 gap-6 mb-10 relative'>
+          <div className='w-full h-auto md:h-[40rem] p-3 width grid md:grid-cols-2 justify-items-center   items-center  '>
+            <div className='w-full md:w-[90%] h-full flex flex-col justify-center items-center   p-3'>
+              <div className='w-full  flex flex-col items-center justify-center gap-1'>
 
-              <div className='w-full  text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold text-white leading-tight px-3'>Explore Quantum Revolution at
-             </div> <div className='w-full  text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold wordGradient leading-tight px-3'> Quantum AI Global</div>
+                <div className='w-full  text-center md:text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold text-white leading-tight px-3'>Explore Quantum Revolution at
+                </div> <div className='w-full  text-center md:text-left text-[1.5rem] md:text-[2rem] 2xl:text-[2.3rem] font-RobotoBold wordGradient leading-tight px-3 mb-3'> Quantum AI Global</div>
+              </div>
+              <div className='w-full text-white text-center md:text-left font-RobotoRegular text-xs md:text-sm px-3 '>Quantum AI Global is unique in its approach to Quantum Technology powered by Intelligence. We are the forefront of the quantum development in hardware and software. We started our work in late 2018 with the establishment of Qulabs, a dedicated Quantum lab under Quantum AI Global with a vision to build and commercialise technologies necessary for long-distance quantum-secure communication in India.
+              </div>
+              <div className='w-full text-white text-center md:text-left font-RobotoRegular text-xs md:text-sm px-3 '>We thrive on our motto ‘collaboration and not competition’, a practical direction to unite intelligence towards building applications for quantum technologies.
+              </div>
+              <div className='w-full  z-10  px-3'>
+                <HomeBoxHover items={homepagebox} />
+              </div>
+
+
+
+
             </div>
-            <div className='w-full text-white text-left font-RobotoRegular text-xs md:text-sm px-3'>Quantum AI Global is a technology first start-up working in creating systems that convert data into intelligence by building products that generate usable information. We see that only a fraction of enterprise data is converted into Intelligence today.
-            </div>
-            <div className='w-full  z-10  px-3'>
-              <HomeBoxHover items={homepagebox} />
-            </div>
-
-
-
-
+            <img src={global} className='w-[32.75rem] h-[31.31rem] object-contain'>
+            </img>
           </div>
-          <img src={global} className='w-[32.75rem] h-[31.31rem] object-contain'>
-          </img>
+
+          <div className="absolute -z-2 left-1/2 top-[60%] transform -translate-x-1/2 -translate-y-1/2 inset-0 md:w-[80%] md:h-[12rem]"
+            style={{
+              background:
+                "radial-gradient(circle at center, rgba(70,196,255,0.2), transparent )",
+              filter: "blur(70px)",
+            }}
+          ></div>
+        </div>
+        <div className='w-full width  md:px-10 2xl:px-20 flex flex-col items-center justify-center' ref={VideoRef}>
+          <VideoComponent image={QSleeveImage} video={QAIG} />
         </div>
 
-        <div className="absolute -z-2 left-1/2 top-[60%] transform -translate-x-1/2 -translate-y-1/2 inset-0 md:w-[80%] md:h-[12rem]"
-          style={{
-            background:
-              "radial-gradient(circle at center, rgba(70,196,255,0.2), transparent )",
-            filter: "blur(70px)",
-          }}
-        ></div>
-      </div>
-      <div className='w-full width  md:px-10 2xl:px-20 flex flex-col items-center justify-center' ref={VideoRef}>
-      <VideoComponent image={QSleeveImage} video={QAIG}  />
-      </div>
-   
-      <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center my-10 gap-2'>
-        <TitleContent title="Partners" content="We have established valuable partnerships with a wide range of industry experts, enabling us to deliver exceptional solutions to our clients by leveraging their expertise and innovative approaches." />
-        <div className="mx-auto  md:px-5 2xl:px-8">
-          <Partnerslogocontainer />
+        <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center my-10 gap-2'>
+          <TitleContent title="Partners" content="We have established valuable partnerships with a wide range of industry experts, enabling us to deliver exceptional solutions to our clients by leveraging their expertise and innovative approaches." />
+          <div className="mx-auto  md:px-5 2xl:px-8">
+            <Partnerslogocontainer />
+          </div>
         </div>
-      </div>
-      <div className='w-full width flex flex-col items-center justify-center mb-10 gap-2'>
+        <div className='w-full width flex flex-col items-center justify-center mb-10 gap-2'>
 
-        <Form />
-      </div>
+          <Form />
+        </div>
 
-      <Footer showpage={true} />
-    </div>
+        <Footer showpage={true} />
+      </div>
     </div>
 
 
