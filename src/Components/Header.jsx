@@ -219,7 +219,7 @@ export default function Header(props) {
               >
                 Resources
               </li>
-              <li
+              {/* <li
                 onClick={() => {
                   window.open("https://qulabs.ai/", "_blank");
                 }}
@@ -233,8 +233,8 @@ export default function Header(props) {
                     <span> Qulabs</span>
                   </HoverBorderButton>
                 </div>
-              </li>
-              <li
+              </li> */}
+              {/* <li
                 onClick={() => {
                   window.open("https://www.quacademy.com/", "_blank");
                 }}
@@ -248,7 +248,7 @@ export default function Header(props) {
                     <span> QuAcademy</span>
                   </HoverBorderButton>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="sm:hidden">
@@ -385,7 +385,7 @@ export default function Header(props) {
               </motion.li>
 
 
-              <motion.li
+              {/* <motion.li
                 onClick={() => {
                   window.open("https://qulabs.ai/", "_blank");
                 }} variants={itemVariants}
@@ -414,7 +414,7 @@ export default function Header(props) {
                     <span> QuAcademy</span>
                   </HoverBorderButton>
                 </div>
-              </motion.li>
+              </motion.li> */}
             </motion.ul>
 
           </motion.div>
