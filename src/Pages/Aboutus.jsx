@@ -9,7 +9,7 @@ import TitleContent from '../Components/TitleContent';
 import Simplebigboxcomponent from '../Components/Simplebigboxcomponent';
 import BigboxComponent from '../Components/BigboxComponent';
 import { aboutdata, portfoliodata } from '../Data/Aboutus';
-import { coreteamprofile, advisoryprofile } from '../Data/Profiles';
+import { coreteamprofile, advisoryprofile ,mentorsprofile } from '../Data/Profiles';
 import global from '../../src/Images/globe.png';
 import arrow1 from '../../src/Images/arrow1.png';
 import arrow2 from '../../src/Images/arrow2.png';
@@ -173,6 +173,23 @@ export default function Aboutus() {
                 </div>
               ))}
             </div>
+            <div className='w-full width md:px-10 pt-5 flex flex-col items-center justify-center gap-2'>
+        <TitleContent title="Mentors" content="Our mentors comprise industry leaders, entrepreneurs, and professionals who have excelled in their respective fields. They are passionate about sharing their insights and helping us and our stakeholders reach full potential. They foster a strong sense of community and work with us as trusted allies, offering ongoing support and building lifelong connections." />
+        <div className="flex flex-wrap md:w-[80rem] items-center justify-center md:px-10  cursor-pointer px-3">
+              {mentorsprofile.map((item) => (
+                <div key={item.id} className="flex-item">
+                  <Profilecomponent
+                    name={item.name}
+                    img={item.img}
+                    linkedin={item. linkedin}
+                    title = {item.title}
+
+                  />
+                </div>
+              ))}
+            </div>
+      </div>
+
           </div>
 
         </div>

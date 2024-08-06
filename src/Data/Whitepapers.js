@@ -24,6 +24,41 @@ export const whitepapers = [
 ]
 
 
+export const publicationsdata=[
+   
+    {
+        id:1,
+        name:"Quantum Secure Direct Communication with mutual authentication using a single basis.",
+        content:"DOP- 10/11/2021 Journal- International Journal of Theoretical Physics Abstract- In this paper, we propose a new theoretical scheme for quantum secure direct communication (QSDC) with user authentication. Different from the previous QSDC protocols, the present protocol uses only one orthogonal basis of single-qubit states to encode the secret message.",
+        link:"https://link.springer.com/article/10.1007/s10773-021-04952-4"
+    },
+    {
+        id:2,
+        name:"Measurement Device Independent QSDC with user authentication",
+        content:"DOP- 26/07/2022 Journal- Quantum Information Processing Abstract- Quantum secure direct communication (QSDC) and deterministic secure quantum communication (DSQC) are two important branches of quantum cryptography, where one can transmit a secret message securely without encrypting it by a prior key. In the practical scenario, an adversary can apply detector-side-channel attacks to get some non-negligible amount of information about the secret message. Measurement-device-independent (MDI) quantum protocols can remove this kind of detector-side-channel attack, by introducing an untrusted third party (UTP), who performs all the measurements during the protocol with imperfect measurement devices.",
+        link:"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Kr9WinMAAAAJ&citation_for_view=Kr9WinMAAAAJ:eQOLeE2rZwMC"
+    },
+    {
+        id:3,
+        name:"Secure multi party Quantum conference XOR computation",
+        content:"DOP- 01/01/2021 Journal- Quantum Information and computation Abstract- Quantum conference is a proces s of securely exchanging messages between three or more parties, using quantum resources. A Measurement Device Independent Quantum Dialogue (MDI-QD) protocol, which is secure against information leakage, has been proposed (Quantum Information Processing 16.12 (2017): 305) in 2017, is proven to be insecure against intercept-and-resend attack strategy. We first modify this protocol and generalize this MDI-QD to a three-party quantum conference and then to a multi-party quantum conference.",
+        link:"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Kr9WinMAAAAJ&citation_for_view=Kr9WinMAAAAJ:Tyk-4Ss8FVUC"
+    },
+    {
+        id:4,
+        name:"Short-cuts on quantum network simulators",
+        content:"DOP- 11/11/2022 Journal- IEEE Xplore Abstract- An important idea in quantum networks is that of employing virtual edges or “short-cuts” between quantum nodes. These edges, which are shared entangled pairs between two nodes that are not directly connected “physically”, are expected to reduce the average latency of entanglement distribution in quantum network routing. In this work, we show how to create such edges on an existing discrete event simulator for quantum networks called SeQUeNCe and study the impact that these edges have on latency. Additionally, we implement a distributed routing algorithm on the simulator and demonstrate its use in conjunction with the virtual edges.",
+        link:"https://ieeexplore.ieee.org/document/9936913"
+    },
+    {
+        id:5,
+        name:"Analyzing Quantum Network routing protocols through time-driven simulations",
+        content:"DOP- 11/11/2022 Journal- IEEE Xplore Abstract- Quantum routing protocols seek to distribute entanglement across different nodes of a quantum network. A recently popular approach for quantum routing is to cut down the latency times for sharing entanglement by using virtual edges in addition to physical ones. While a physical edge is associated with the presence of a quantum channel, virtual edges correspond to pre-existing entanglement between some nodes which can be leveraged for entanglement swapping. Distributed routing protocols for quantum networks have been proposed and analyzed using this idea.",
+        link:"https://ieeexplore.ieee.org/document/9936958"
+    },
+    
+    ];
+
 
 
 
