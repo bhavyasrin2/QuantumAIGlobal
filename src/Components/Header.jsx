@@ -81,7 +81,7 @@ export default function Header(props) {
               </li>
               <li
                 onMouseLeave={() => {
-                  setProducts(false);
+                  setCompany(false);
                 }}
                 onMouseOver={() => {
                   setCompany(true);
