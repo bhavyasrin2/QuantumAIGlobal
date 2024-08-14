@@ -14,6 +14,7 @@ export const theme = {
       RobotoRegular: "Roboto-Regular",
       RobotoMedium: "Roboto-Medium",
       RobotoBold:"Roboto-Bold",
+      Quantify:"Quantify",
       
     },
   },

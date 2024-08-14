@@ -131,7 +131,7 @@ export default function Productspicture() {
                               alt={product.name}
                               className="object-fill cursor-pointer"
                             />
-                            <p className={`text-white  text-center w-full ${hoveredIndex1=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
+                            <p className={`text-white font-Quantify text-center w-full ${hoveredIndex1=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
                           
                           </div>
                        
@@ -177,7 +177,7 @@ export default function Productspicture() {
                               alt={product.name}
                               className="object-fill cursor-pointer"
                             />
-                            <p className={`text-white  text-center w-full ${hoveredIndex2=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
+                            <p className={`text-white font-Quantify text-center w-full ${hoveredIndex2=== index? '2xl:text-lg text-sm':'2xl:text-sm text-xs'}`}>{product.title}</p>
                           
                           </div>
                        

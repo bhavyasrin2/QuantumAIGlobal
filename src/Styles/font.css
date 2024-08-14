@@ -10,3 +10,8 @@
     font-family: "Roboto-Bold";
     src: url("../../src/Fonts/Roboto-Bold.ttf");
 }
+
+@font-face {
+    font-family: "Quantify";
+    src: url("../../src/Fonts/Quantify.ttf");
+}
