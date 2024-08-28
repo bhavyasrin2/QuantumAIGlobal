@@ -36,24 +36,39 @@ export const directorsprofile=[
         title:"Founder & CEO",
         
       },
+      {
+        id: 2,
+        name: "Mr. Kapil Jaiswal",
+        img: require("../../src/Images/KAPIL.png"),
+        linkedin: "",
+        title:"CTO",
+        
+      },
     
      
       {
-        id: 2,
-        name: "Gopika Chaganti",
+        id: 3,
+        name: "Ms. Gopika Chaganti",
         img: require("../../src/Images/GOPIKA.png"),
         linkedin: "https://www.linkedin.com/in/gopika-chaganti/",
-        title: "COO / AI Product Head",
+        title: "COO",
       },
       {
-        id: 3,
+        id: 4,
         name: "Dr. Aishik Acharya",
         img: require("../../src/Images/ACHARYA.png"),
         linkedin: "https://www.linkedin.com/in/dr-aishik-acharya-7a717287/",
         title: "Head of Quantum Engineering",
       },
       {
-        id:4,
+        id: 5,
+        name: "Dr. Sachin Barthwal",
+        img: require("../../src/Images/SACHIN.png"),
+        linkedin: "https://www.linkedin.com/in/sachin-barthwal-38190322a/",
+        title: "Quantum Product Head",
+      },
+      {
+        id:6,
         name:"Dr. Avinash Chalumuri",
         img:require("../../src/Images/AVINASH.png"),
         linkedin:"https://www.linkedin.com/in/avinash-chalumuri-phd-57ab2616b/",
@@ -61,7 +76,7 @@ export const directorsprofile=[
       },
      
       {
-        id: 5,
+        id: 7,
         name: "Mr. Devendra Mishra",
         img: require("../../src/Images/DEVENDER.png"),
         linkedin: "https://www.linkedin.com/in/devendra-mishra444/",
@@ -69,7 +84,7 @@ export const directorsprofile=[
        
       },
       {
-        id: 6,
+        id: 8,
         name: "Mr. Rikteem Bhowmick",
         img: require("../../src/Images/RIKTHIM.png"),
         linkedin: "https://www.linkedin.com/in/rikteem-bhowmick-aa3050228/",
@@ -77,14 +92,14 @@ export const directorsprofile=[
        
       },
       {
-        id: 7,
+        id: 9,
         name: "Dr. Bappaditya Sankhari",
         img: require("../../src/Images/BAPPA.png"),
         linkedin: "https://www.linkedin.com/in/bappaditya-sankhari-6b5268a8/",
         title: "Head of Quantum Architecture",
       },
       {
-        id: 8,
+        id: 10,
         name: "Mr. Rama Theja",
         img: require("../../src/Images/RAM THEJA.png"),
         linkedin: "https://www.linkedin.com/in/ramatheja/",
