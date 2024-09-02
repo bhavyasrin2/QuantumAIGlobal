@@ -24,6 +24,11 @@ export const logodata=[
         name:"Qulabs",
         img:require("../../src/Images/Qulabslogo.png"),
     },
+    {
+        id:6,
+        name:"Q-CTRL",
+        img:require("../Images/Q-CTRL.png"),
+    }
 ]
 
 
