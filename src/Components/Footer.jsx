@@ -48,7 +48,7 @@ export default function Footer(props) {
   };
 
   const openTwitterProfile = () => {
-    window.open('https://twitter.com/i/flow/login?redirect_after_login=%2Fqulabssoftware', '_blank');
+    window.open('https://x.com/quantumaiglobal?s=11', '_blank');
   };
 
   const openLinkedInProfile = () => {

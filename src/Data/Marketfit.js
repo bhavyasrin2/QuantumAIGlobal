@@ -11,12 +11,12 @@ export const migrationdata=[
         img:require("../../src/Images/Q-SLEEVE.png"),
         content:"Comprehensive Security wrapper resistant to quantum attacks",
     },
-    {
-        id:3,
-        name:"QuRNG",
-        img:require("../../src/Images/QKD.png"),
-        content:"Delivers  Quantum randomness and unbreakable keys for greater trust",
-    },
+    // {
+    //     id:3,
+    //     name:"QuRNG",
+    //     img:require("../../src/Images/QKD.png"),
+    //     content:"Delivers  Quantum randomness and unbreakable keys for greater trust",
+    // },
 
 ];
 
