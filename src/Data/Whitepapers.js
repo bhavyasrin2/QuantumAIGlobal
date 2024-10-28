@@ -26,36 +26,320 @@ export const whitepapers = [
 
 export const publicationsdata=[
    
-    {
-        id:1,
-        name:"Quantum Secure Direct Communication with mutual authentication using a single basis.",
-        content:"DOP- 10/11/2021 Journal- International Journal of Theoretical Physics Abstract- In this paper, we propose a new theoretical scheme for quantum secure direct communication (QSDC) with user authentication. Different from the previous QSDC protocols, the present protocol uses only one orthogonal basis of single-qubit states to encode the secret message.",
-        link:"https://link.springer.com/article/10.1007/s10773-021-04952-4"
-    },
-    {
-        id:2,
-        name:"Measurement Device Independent QSDC with user authentication",
-        content:"DOP- 26/07/2022 Journal- Quantum Information Processing Abstract- Quantum secure direct communication (QSDC) and deterministic secure quantum communication (DSQC) are two important branches of quantum cryptography, where one can transmit a secret message securely without encrypting it by a prior key. In the practical scenario, an adversary can apply detector-side-channel attacks to get some non-negligible amount of information about the secret message. Measurement-device-independent (MDI) quantum protocols can remove this kind of detector-side-channel attack, by introducing an untrusted third party (UTP), who performs all the measurements during the protocol with imperfect measurement devices.",
-        link:"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Kr9WinMAAAAJ&citation_for_view=Kr9WinMAAAAJ:eQOLeE2rZwMC"
-    },
-    {
-        id:3,
-        name:"Secure multi party Quantum conference XOR computation",
-        content:"DOP- 01/01/2021 Journal- Quantum Information and computation Abstract- Quantum conference is a proces s of securely exchanging messages between three or more parties, using quantum resources. A Measurement Device Independent Quantum Dialogue (MDI-QD) protocol, which is secure against information leakage, has been proposed (Quantum Information Processing 16.12 (2017): 305) in 2017, is proven to be insecure against intercept-and-resend attack strategy. We first modify this protocol and generalize this MDI-QD to a three-party quantum conference and then to a multi-party quantum conference.",
-        link:"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Kr9WinMAAAAJ&citation_for_view=Kr9WinMAAAAJ:Tyk-4Ss8FVUC"
-    },
-    {
-        id:4,
-        name:"Short-cuts on quantum network simulators",
-        content:"DOP- 11/11/2022 Journal- IEEE Xplore Abstract- An important idea in quantum networks is that of employing virtual edges or “short-cuts” between quantum nodes. These edges, which are shared entangled pairs between two nodes that are not directly connected “physically”, are expected to reduce the average latency of entanglement distribution in quantum network routing. In this work, we show how to create such edges on an existing discrete event simulator for quantum networks called SeQUeNCe and study the impact that these edges have on latency. Additionally, we implement a distributed routing algorithm on the simulator and demonstrate its use in conjunction with the virtual edges.",
-        link:"https://ieeexplore.ieee.org/document/9936913"
-    },
-    {
-        id:5,
-        name:"Analyzing Quantum Network routing protocols through time-driven simulations",
-        content:"DOP- 11/11/2022 Journal- IEEE Xplore Abstract- Quantum routing protocols seek to distribute entanglement across different nodes of a quantum network. A recently popular approach for quantum routing is to cut down the latency times for sharing entanglement by using virtual edges in addition to physical ones. While a physical edge is associated with the presence of a quantum channel, virtual edges correspond to pre-existing entanglement between some nodes which can be leveraged for entanglement swapping. Distributed routing protocols for quantum networks have been proposed and analyzed using this idea.",
-        link:"https://ieeexplore.ieee.org/document/9936958"
-    },
+    
+        {
+            id: 1,
+            name: "A hybrid classical-quantum approach for multi-class classification",
+            link: "https://link.springer.com/article/10.1007/s11128-021-03029-9"
+        },
+        {
+            id: 2,
+            name: "Quantum Processing in Fusion of SAR and Optical Images for Deep Learning: A Data-Centric Approach",
+            link: "https://ieeexplore.ieee.org/abstract/document/9819905"
+        },
+        {
+            id: 3,
+            name: "Quantum-enhanced deep neural network architecture for image scene classification",
+            link: "https://link.springer.com/article/10.1007/s11128-021-03314-7"
+        },
+        {
+            id: 4,
+            name: "Training an Artificial Neural Network Using Qubits as Artificial Neurons: A Quantum Computing Approach",
+            link: "https://www.sciencedirect.com/science/article/pii/S1877050920310280"
+        },
+        {
+            id: 5,
+            name: "Quantum–Classical Image Processing for Scene Classification",
+            link: "https://ieeexplore.ieee.org/abstract/document/9772344"
+        },
+        {
+            id: 6,
+            name: "Quantum Approach to Image Data Encoding and Compression",
+            link: "https://ieeexplore.ieee.org/abstract/document/10025669"
+        },
+        {
+            id: 7,
+            name: "Data Acquisition and Utilization of Quantum Processed SAR and Optical Images for Scene Classification",
+            link: "https://d197for5662m48.cloudfront.net/documents/publicationstatus/173274/preprint_pdf/c37dadc206a1ceaba0a0f7bc92c7bf92.pdf"
+        },
+        {
+            id: 8,
+            name: "Quantum Approach to Satellite Image Data Compression and Analysis",
+            link: "https://www.techrxiv.org/doi/full/10.36227/techrxiv.21397227.v1"
+        },
+        {
+            id: 9,
+            name: "Transformer and Deep CNN-based Product Recommendation System",
+            link: "https://ieeexplore.ieee.org/abstract/document/10307936"
+        },
+        {
+            id: 10,
+            name: "HCQC: Hybrid Classical-Quantum-Classical Transfer Learning Method for COVID-19 Detection",
+            link: "https://europepmc.org/article/ppr/ppr602105"
+        },
+            {
+                id: 11,
+                name: "Circuit Complexity in Z2 EEFT",
+                link: "https://www.mdpi.com/2073-8994/15/1/31"
+            },
+            {
+                id: 12,
+                name: "Causality Constraint on Circuit Complexity from COSMOEFT",
+                link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/prop.202200199"
+            },
+            {
+                id: 13,
+                name: "Circuit Complexity in Interacting Quenched Quantum Field Theory",
+                link: "https://www.mdpi.com/2073-8994/15/3/655"
+            },
+            {
+                id: 14,
+                name: "Entanglement in interacting quenched two-body coupled oscillator system",
+                link: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.025002"
+            },
+            {
+                id: 15,
+                name: "Four-mode Squeezed States in de Sitter Space: A Study With Two Field Interacting Quantum System",
+                link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/prop.202200124"
+            },
+            {
+                id: 16,
+                name: "Terahertz Wave Propagation Characteristics in Graded Teflon Based Solid-Core Photonic Crystal Fibre",
+                link: "https://iopscience.iop.org/article/10.1088/1742-6596/2426/1/012021/meta"
+            },
+            {
+                id: 17,
+                name: "Schwinger-Keldysh path integral formalism for a Quenched Quantum Inverted Oscillator",
+                link: "https://d1wqtxts1xzle7.cloudfront.net/94968660/2210.01134-libre.pdf"
+            },
+            {
+                id: 18,
+                name: "Entanglement in interacting quenched Quantum Field Theory",
+                link: "https://arxiv.org/abs/2204.05326"
+            },
+            {
+                id: 19,
+                name: "Circuit Complexity in Z2 EEFT",
+                link: "https://d-nb.info/129040416X/34"
+            },
+            {
+                id: 20,
+                name: "Absolute frequency measurements in Yb with 0.08ppb uncertainty: Isotope shifts and hyperfine structure in the 399−nm 1𝑆0→1𝑃1 line",
+                link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.032506"
+            },
+            {
+                id: 21,
+                name: "Joint mass-and-energy test of the equivalence principle at the 10−10 level using atoms with specified mass and internal energy",
+                link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.022822"
+            },
+            
+                {
+                    id: 22,
+                    name: "A rubidium-stabilized ring-cavity resonator for optical frequency metrology: precise measurement of the D1 line in 133CS",
+                    link: "https://link.springer.com/article/10.1140/epjd/e2006-00065-7"
+                },
+                {
+                    id: 23,
+                    name: "An actively compensated 8 nT-level magnetic shielding system for 10-m atom interferometer",
+                    link: "https://pubs.aip.org/aip/rsi/article-abstract/92/8/083201/1030848/An-actively-compensated-8-nT-level-magnetic?redirectedFrom=fulltext"
+                },
+                {
+                    id: 24,
+                    name: "United test of the equivalence principle at 10−10 level using mass and internal energy specified atoms",
+                    link: "https://arxiv.org/abs/1904.07096"
+                },
+                {
+                    id: 25,
+                    name: "Characterization and optimization of a tapered amplifier by its spectra through a long multi-pass rubidium absorption cell",
+                    link: "https://opg.optica.org/ao/abstract.cfm?uri=ao-57-26-7427"
+                },
+                {
+                    id: 26,
+                    name: "All acousto-optic modulator laser system for a 12 m fountain-type dual-species atom interferometer",
+                    link: "https://opg.optica.org/ao/abstract.cfm?uri=ao-60-17-5258"
+                },
+                {
+                    id: 27,
+                    name: "Competition effects of multiple quantum paths in an atom interferometer",
+                    link: "https://www.sciencedirect.com/science/article/abs/pii/S0030401818306990"
+                },
+                {
+                    id: 28,
+                    name: "UV–visible spectroscopic study of laser irradiated lithium colloids and ionic liquids",
+                    link: "https://www.sciencedirect.com/science/article/abs/pii/S0167732215300027"
+                },
+                {
+                    id: 29,
+                    name: "Construction of an inexpensive molecular iodine spectrometer using a self-developed Pohl wavemeter around 670 nm wavelength",
+                    link: "https://iopscience.iop.org/article/10.1088/0143-0807/36/5/055014/meta"
+                },
+                {
+                    id: 30,
+                    name: "Repulsive Polarons in One-Dimensional Fermi Gases",
+                    link: "https://iopscience.iop.org/article/10.1088/0253-6102/71/5/617/meta"
+                },
+                {
+                    id: 31,
+                    name: "Accurate wavelength measurement with Pohl interferometer through post detection processing",
+                    link: "https://pubs.aip.org/aip/acp/article-abstract/1620/1/445/852970/Accurate-wavelength-measurement-with-Pohl"
+                },
+                {
+                    id: 32,
+                    name: "Realization of a single-beam, detachable, cascaded 2D magneto-optical trap based modular cesium source",
+                    link: "https://opg.optica.org/josab/abstract.cfm?uri=josab-41-9-1906"
+                },
+                {
+                    id: 33,
+                    name: "A Merged Ultracold System for Cs-Li Quantum Gas Mixtures",
+                    link: "https://meetings.aps.org/Meeting/DAMOP24/Session/R09.8"
+                },
+                {
+                    id: 34,
+                    name: "Detachable 2D MOT Platform as a Cesium Source Towards the Construction of a Quantum Simulator Involving Cesium-Lithium Mixtures",
+                    link: "https://ui.adsabs.harvard.edu/abs/2023APS..DMPS07008Y/abstract"
+                },
+                {
+                    id: 35,
+                    name: "A Mass-Energy United Test of the Equivalence Principle",
+                    link: "https://www.researchsquare.com/article/rs-63775/v1"
+                },
+                {
+                    id: 36,
+                    name: "Semiconductor Conical Laser Amplifying Device in Single-way and Two-way Composite Mode",
+                    link: "https://scholar.google.com.sg/citations?view_op=view_citation&hl=en&user=3abS5hAAAAAJ&citation_for_view=3abS5hAAAAAJ:WF5omc3nYNoC"
+                },
+                {
+                    id: 37,
+                    name: "Semiconductor Conical Laser Amplification System in a Single-way and Two-way Composite Modes",
+                    link: "https://scholar.google.com.sg/citations?view_op=view_citation&hl=en&user=3abS5hAAAAAJ&citation_for_view=3abS5hAAAAAJ:eQOLeE2rZwMC"
+                },
+                {
+                    id: 38,
+                    name: "Transverse laser cooled Lithium atomic beam for plasma edge diagnostics",
+                    link: "https://iopscience.iop.org/article/10.1088/1748-0221/11/05/P05026/meta"
+                },
+                {
+                    id: 39,
+                    name: "Thin film detection of High Energy Materials: Optical Pumping Approach",
+                    link: "https://arxiv.org/abs/1412.2741"
+                },
+                {
+                    id: 40,
+                    name: "Electronic Spectroscopy of Laser Irradiated Li-PMMA",
+                    link: "https://www.researchgate.net/profile/Sachin-Barthwal/publication/267338664_Electronic_Spectroscopy_of_Laser_Irradiated_Li-PMMA/links/557928b708aeb6d8c01f1f3c/Electronic-Spectroscopy-of-Laser-Irradiated-Li-PMMA.pdf"
+                },
+                {
+                    id: 41,
+                    name: "PART A-Atomic and molecular structure and dynamics-Absolute frequency measurements in Yb with 0.08 ppb uncertainty: Isotope shifts and hyperfine structure in the 399-nm 1S0",
+                    link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.032506"
+                },
+
+                    {
+                        id: 42,
+                        name: "Analyzing Quantum Network Routing Protocols through Time-Driven Simulations",
+                        link: "https://ieeexplore.ieee.org/abstract/document/9936958"
+                    },
+                    {
+                        id: 43,
+                        name: "Short-cuts on quantum network simulators",
+                        link: "https://ieeexplore.ieee.org/abstract/document/9936913"
+                    },
+                    {
+                        id: 44,
+                        name: "Digital Quantum Simulations of Hong-Ou-Mandel Interference",
+                        link: "https://arxiv.org/abs/2402.17522"
+                    },
+                    {
+                        id: 45,
+                        name: "Towards Quantum Dynamics Simulation of Physical Systems: A Survey",
+                        link: "https://arxiv.org/abs/2310.11801"
+                    },
+                    {
+                        id: 46,
+                        name: "Dark Matter: Physics Beyond The Standard Model of Particle Physics",
+                        link: "https://scholar.google.com/scholar?cluster=10051233772271367673&hl=en&oi=scholarr"
+                    },
+                    {
+                        id: 47,
+                        name: "RF E-field Sensing Using Rydberg Atom-Based Microwave Electrometry",
+                        link: "https://link.springer.com/article/10.1007/s12647-020-00404-2"
+                    },
+                    {
+                        id: 48,
+                        name: "Study of the Electromagnetic-Induced Transparency and its Dependence on Probe Decay for Cascade, Lambda, and Vee Models",
+                        link: "https://link.springer.com/article/10.1007/s12647-021-00510-9"
+                    },
+                    {
+                        id: 49,
+                        name: "Quantum Phenomena driven SI Traceable E-Field Measurement of Broadband Stripline",
+                        link: "https://ieeexplore.ieee.org/abstract/document/10584600"
+                    },
+                    {
+                        id: 50,
+                        name: "Quantum Microwave Measurements",
+                        link: "https://link.springer.com/referenceworkentry/10.1007/978-981-19-1550-5_79-2"
+                    },
+                    {
+                        id: 51,
+                        name: "Phase Controlled Electromagnetically Induced Transparency in a Closed Cyclic Lambda Atomic System",
+                        link: "https://ieeexplore.ieee.org/abstract/document/10118543"
+                    },
+                    {
+                        id: 52,
+                        name: "Spectral Sensing for Cognitive Radio: Estimation of Adaptive Frequency Hopping Signal, IEEE TENCON 2008, Hyderabad, India November 18-21, 2008",
+                        link: "https://ieeexplore.ieee.org/document/4766681"
+                    },
+                    {
+                        id: 53,
+                        name: "Spectral Sensing for Cognitive Radio: Detection and Estimation of Adaptive Frequency Hopping Signal, Fifteenth National Conference on Communications 2009 (NCC 2009), IIT Guwahati",
+                        link: "https://iitg.ac.in/eee/ncc2009/NCC09_TechnicalProgram.pdf"
+                    },
+                    {
+                        id: 54,
+                        name: "Spectral Sensing of Adaptive Frequency Hopping Signal for Cognitive Radio, 27th IEEE International Performance Computing and Communications Conference December 7-9, 2008, Austin, Texas, USA",
+                        link: "https://ieeexplore.ieee.org/document/4745096"
+                    },
+                    {
+                        id: 55,
+                        name: "Design Analysis of Satellite Network Architecture for Military Communications, DEFCOM India Journal 2017 (ISSN 2394-2398)",
+                        link: "https://pib.gov.in/PressReleasePage.aspx?PRID=1480333"
+                    },
+                    {
+                        id: 56,
+                        name: "Future of Cryptography: Quantum Key Distribution through Micro-Satellites, DEFCOM India Journal 2019 (ISSN 2394-2398)",
+                        link: "https://pib.gov.in/PressReleasePage.aspx?PRID=1593564"
+                    },
+                    {
+                        id: 57,
+                        name: "Threat Analysis of MilSatCom Assets in Protected SatCom Environment, SMi MilSatCom Asia-Pacific, 14-15 May 2018, Singapore",
+                        link: "https://www.smgconferences.com/defence/asia/conference/milsatcom-asia#tab_programme"
+                    },
+                    {
+                        id: 58,
+                        name: "Hughes Network System (HNS) Conference on High Throughput Satellites, 10 Apr 2019, New Delhi Title: Challenges of HTS for Military Communications",
+                        link: ""
+                    },
+                    {
+                        id: 59,
+                        name: "Military Space USA, West Coast, 11-12 June 2019, Los Angeles. Title: MilSatCom in Contested & Denied Domains: APAC Region",
+                        link: "https://www.asdevents.com/event.asp?id=20330"
+                    },
+                    {
+                        id: 60,
+                        name: "SES Global Conference on Secure Satellite Communications, 08 Nov 2019, New Delhi. Title: Secure Information Exchange in Military Environment",
+                        link: ""
+                    }
+                
+                
+            
+            
+        
+        
+    
+    
+    
+    
+
     
     ];
 
