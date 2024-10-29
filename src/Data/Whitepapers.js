@@ -124,20 +124,21 @@ export const publicationsdata=[
         },
         {
             id: 20,
-            name: "Absolute frequency measurements in Yb with 0.08ppb uncertainty: Isotope shifts and hyperfine structure in the 399−nm 1𝑆0→1𝑃1 line",
+            name: "Absolute frequency measurements in Yb with 0.08ppb uncertainty: Isotope shifts and hyperfine structure in the 399−nm ¹S₀→¹P₁ line.",
             link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.032506"
         },
         {
-            id: 21,
-            name: "Joint mass-and-energy test of the equivalence principle at the 10−10 level using atoms with specified mass and internal energy",
-            link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.022822"
-        },
+            "id": 21,
+            "name": "Joint mass-and-energy test of the equivalence principle at the 10⁻¹⁰ level using atoms with specified mass and internal energy",
+            "link": "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.022822"
+          },
         
-            {
-                id: 22,
-                name: "A rubidium-stabilized ring-cavity resonator for optical frequency metrology: precise measurement of the D1 line in 133CS",
-                link: "https://link.springer.com/article/10.1140/epjd/e2006-00065-7"
-            },
+          {
+            "id": 22,
+            "name": "A rubidium-stabilized ring-cavity resonator for optical frequency metrology: precise measurement of the D₁ line in Csⁱ³³.",
+            "link": "https://link.springer.com/article/10.1140/epjd/e2006-00065-7"
+          },
+          
             {
                 id: 23,
                 name: "An actively compensated 8 nT-level magnetic shielding system for 10-m atom interferometer",
@@ -145,7 +146,7 @@ export const publicationsdata=[
             },
             {
                 id: 24,
-                name: "United test of the equivalence principle at 10−10 level using mass and internal energy specified atoms",
+                name: "United test of the equivalence principle at 10⁻¹⁰ level using mass and internal energy specified atoms",
                 link: "https://arxiv.org/abs/1904.07096"
             },
             {
