@@ -135,7 +135,7 @@ export const publicationsdata=[
         
           {
             "id": 22,
-            "name": "A rubidium-stabilized ring-cavity resonator for optical frequency metrology: precise measurement of the D₁ line in Csⁱ³³.",
+            "name": "A rubidium-stabilized ring-cavity resonator for optical frequency metrology: precise measurement of the D₁ line in ¹³³Cs.",
             "link": "https://link.springer.com/article/10.1140/epjd/e2006-00065-7"
           },
           
