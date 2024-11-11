@@ -1,18 +1,79 @@
 export const quantumProducts = [
-    { title: "Qsleeve",name: "Qsleeve", image: require("../../src/Images/Q-SLEEVE LOGO.png"),  },
-    { title: "ChecQ",name:"", image: require("../../src/Images/CHEC-Q.png") },
-    { title: "QMag",name:"", image: require("../../src/Images/Q-Mag.png") },
-    { title: "QMemory",name:"", image: require("../../src/Images/Q MEMORY LOGO.png") },
-    { title: "Q-Folio Pro",name:"", image: require("../../src/Images/Q-folio pro logo.png") },
-    { title:"EPS-QKD",name:"", image: require("../../src/Images/QKD LOGO.png") },
-    { title: "QubitIQ",name:"", image: require("../../src/Images/QUBIT-IQ LOGO.png") },
+  { 
+      title: "Qsleeve",
+      name: "Qsleeve", 
+      image: require("../../src/Images/Q-SLEEVE LOGO.png"),
+      headline: "",
+      content: ""
+  },
+  { 
+      title: "ChecQ",
+      name: "", 
+      image: require("../../src/Images/CHEC-Q.png"),
+      headline: "Quantum Vulnerability Scanning Tool",
+      content: "ChecQ addresses emerging threats posed by quantum computing, detecting cryptographic vulnerabilities in websites and software. Institutions can proactively safeguard systems and critical infrastructure."
+  },
+  { 
+      title: "QMag",
+      name: "", 
+      image: require("../../src/Images/Q-Mag.png"),
+       headline: "",
+      content: ""
+  },
+  { 
+      title: "QMemory",
+      name: "", 
+      image: require("../../src/Images/Q MEMORY LOGO.png"),
+       headline: "",
+      content: ""
+  },
+  { 
+      title: "Q-Folio Pro",
+      name: "", 
+      image: require("../../src/Images/Q-folio pro logo.png"),
+      headline: "Quantum-Enabled Portfolio Optimization",
+      content: "Q-Folio Pro harnesses quantum computing for advanced forecasting and optimized portfolio management, optimizing asset allocation for maximum return."
+  },
+  { 
+      title: "EPS-QKD",
+      name: "", 
+      image: require("../../src/Images/QKD LOGO.png"),
+       headline: "",
+      content: ""
+  },
+  { 
+      title: "QubitIQ",
+      name: "", 
+      image: require("../../src/Images/QUBIT-IQ LOGO.png"),
+      headline: "Transforming Data Processing through Quantum-Enhanced Intelligence",
+      content: "To pioneer an intelligent software system that synergizes the power of quantum computing and machine intelligence for multi-modal data analysis."
+  }
 ];
 
 export const aiProducts = [
-    { title: "CL(AI)MS",name:"", image: require("../../src/Images/CLAIMS LOGO.png") },
-    { title: "HealMed",name:"", image: require("../../src/Images/HEAL MED LOGO.png") },
-    { title: "LAB-AI",name:"", image: require("../../src/Images/LAB-AI LOGO.png") },
+  { 
+      title: "CL(AI)MS",
+      name: "", 
+      image: require("../../src/Images/CLAIMS LOGO.png"),
+      headline: "Empowering Hospitals with AI-Driven Insurance Claims Processing",
+      content: "Revolutionizing the healthcare industry through AI-driven claims processing, CL(AI)MS empowers hospitals to efficiently process claims, streamlining operations and improving patient care."
+  },
+  { 
+      title: "HealMed",
+      name: "", 
+      image: require("../../src/Images/HEAL MED LOGO.png"),
+      headline: "AI-Powered Support for Mental Health",
+      content: "HealMed bridges the gap between mental health experts and those seeking assistance, providing AI-powered support to alleviate professional burnout and ensure equitable access to care."
+  },
+  { 
+      title: "LAB-AI",
+      name: "", 
+      image: require("../../src/Images/LAB-AI LOGO.png"),
+      headline: "Measuring Compliance Effectiveness in Hospitals",
+      content: "Using Generative AI, LAB-AI evaluates hospital compliance with healthcare regulations, ensuring adherence to standards and improving care quality."
+  }
 ];
+
 
 export const products = [
   {

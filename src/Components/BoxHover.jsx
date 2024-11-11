@@ -182,7 +182,7 @@ const CardButton2=({className,children,hovered,name})=>{
           ) }  onClick={() => handleCardClick(name)}
       >
       
-          <div className=" text-white text-xs md:text-sm font-RobotoMedium">Learn more</div>
+          <div className={`text-white text-xs md:text-sm font-RobotoMedium ${name !== ""? 'cursor-pointer' : 'cursor-none'} `}>Learn more</div>
        
       </div>
     )
