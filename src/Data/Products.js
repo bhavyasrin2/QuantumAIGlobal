@@ -3,8 +3,9 @@ export const quantumProducts = [
       title: "Qsleeve",
       name: "Qsleeve", 
       image: require("../../src/Images/Q-SLEEVE LOGO.png"),
-      headline: "",
-      content: ""
+      headline: "Quantum-Safe Data Protection Made Easy",
+      content: "explore more",
+
   },
   { 
       title: "ChecQ",
@@ -17,7 +18,7 @@ export const quantumProducts = [
       title: "QMag",
       name: "", 
       image: require("../../src/Images/Q-Mag.png"),
-       headline: "",
+      headline: "",
       content: ""
   },
   { 

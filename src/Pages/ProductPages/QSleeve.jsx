@@ -57,8 +57,8 @@ export default function QSleeve() {
       <ProductHeader  scrollToRequestDemo={scrollToRequestDemo}/>
       <div className="w-full h-[30rem] ">
         <ProductsHeroSection
-          title1="Quantum-safe data "
-          title2="protection made easy"
+          title1="Quantum-Safe Data "
+          title2="Protection Made Easy"
           content="Future-proof your online security with our VPN’s quantum-safe technology, keeping your data safe from even the most advanced attacks. "
           scrollToArchitecture={scrollToArchitecture}
          

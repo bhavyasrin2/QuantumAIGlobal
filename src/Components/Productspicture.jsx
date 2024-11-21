@@ -3,6 +3,7 @@ import '../App.css';
 import { motion } from 'framer-motion';
 import { quantumProducts, aiProducts } from '../Data/Products';
 import { useNavigate } from 'react-router-dom';
+import HoverBorderButton from "../Components/HoverBorderButton";
 
 export default function Productspicture() {
   const [hoveredIndex1, setHoveredIndex1] = useState(null);
@@ -15,7 +16,7 @@ export default function Productspicture() {
 
   const [radius1, setRadius1] = useState(215);
   const [radius2, setRadius2] = useState(155);
-  const hoverRadius1= 170;
+  const hoverRadius1 = 170;
   const hoverRadius2 = 150 // Increase radius for hover box
 
   const [centerImageSize1, setCenterImageSize1] = useState(270);
@@ -78,8 +79,8 @@ export default function Productspicture() {
             const x = radius1 * Math.cos((angle * Math.PI) / 180);
             const y = radius1 * Math.sin((angle * Math.PI) / 180);
 
-            const hoverX = hoverRadius1 * Math.cos((angle * Math.PI ) / 180);
-            const hoverY = hoverRadius1 * Math.sin((angle * Math.PI )/180);
+            const hoverX = hoverRadius1 * Math.cos((angle * Math.PI) / 180);
+            const hoverY = hoverRadius1 * Math.sin((angle * Math.PI) / 180);
 
             return (
               <div
@@ -101,20 +102,44 @@ export default function Productspicture() {
                 <img
                   src={product.image}
                   alt={product.title}
-                  className={`object-fill  ${product.name !== ""? 'cursor-pointer' :'cursor-default'} `}
+                  className={`object-fill  ${product.name !== "" ? 'cursor-pointer' : 'cursor-default'} `}
                 />
                 <p className={`text-white font-Quantify text-center w-full ${hoveredIndex1 === index ? '2xl:text-lg text-sm' : '2xl:text-sm text-xs'}`}>{product.title}</p>
-                {hoveredIndex1 === index && product.headline && (
+                {
+                  hoveredIndex1 === index && product.name && product.headline && (
+                    <div className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide hover-box absolute  py-3 px-4 bg-black h-auto rounded-2xl border-[0.03rem]  border-[#444D61] "
+                      style={{
+                        top: `calc(25% + ${hoverY}px)`,
+                        left: `calc(50% + ${hoverX}px)`,
+                        transform: 'translate(-50%, -50%)',
+                      }}
+                    >
+                      <h4 className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide mb-1">{product.headline}</h4>
+                      <div className=" flex justify-start text-center mt-2">
+                        <HoverBorderButton
+                          containerClassName="rounded-full"
+                          as="button"
+                          className="bg-black font-RobotoMedium text-xs text-white flex items-center px-3 py-1"
+                          onClick={() => handleCardClick(product.name)}
+                        >
+
+                          <span> {product.content}</span>
+                        </HoverBorderButton>
+                      </div>
+                    </div>
+                  )
+                }
+                {hoveredIndex1 === index && product.name === "" && product.headline && (
                   <div
-                    className="hover-box absolute  p-3 w-[15rem] bg-black h-auto rounded-md border-[0.03rem]   border-[#444D61] "
+                    className="hover-box absolute w-[15rem] py-3 px-4  bg-black h-auto rounded-2xl border-[0.03rem]   border-[#444D61] "
                     style={{
                       top: `calc(25% + ${hoverY}px)`,
                       left: `calc(50% + ${hoverX}px)`,
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
-    <h4 className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide mb-1">{product.headline}</h4>
-                    <p className='text-white font-RobotoRegular text-[0.675rem]'>{product.content}</p>
+                    <h4 className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide mb-1">{product.headline}</h4>
+                    <p className='text-white font-RobotoRegular  text-[0.675rem]'>{product.content}</p>
                   </div>
                 )}
               </div>
@@ -135,7 +160,7 @@ export default function Productspicture() {
             const y = radius2 * Math.sin((angle * Math.PI) / 180);
 
             const hoverX = hoverRadius2 * Math.cos((angle * Math.PI) / 180);
-            const hoverY = hoverRadius2 * Math.sin((angle * Math.PI )/ 180);
+            const hoverY = hoverRadius2 * Math.sin((angle * Math.PI) / 180);
 
             return (
               <div
@@ -157,20 +182,34 @@ export default function Productspicture() {
                 <img
                   src={product.image}
                   alt={product.title}
-                  className={`object-fill  ${product.name !== ""? 'cursor-pointer' :'cursor-default'} `}
+                  className={`object-fill  ${product.name !== "" ? 'cursor-pointer' : 'cursor-default'} `}
                 />
                 <p className={`text-white font-Quantify text-center w-full ${hoveredIndex2 === index ? '2xl:text-lg text-sm' : '2xl:text-sm text-xs'}`}>{product.title}</p>
-                {hoveredIndex2 === index && product.headline && (
+                {
+                  hoveredIndex2 === index && product.name && product.headline && (
+                    <div className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide hover-box absolute  py-3 px-4 bg-black h-auto rounded-2xl border-[0.03rem]  border-[#444D61] "
+                      style={{
+                        top: `calc(25% + ${hoverY}px)`,
+                        left: `calc(50% + ${hoverX}px)`,
+                        transform: 'translate(-50%, -50%)',
+                      }}
+                    >
+                      <h4 className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide mb-1">{product.headline}</h4>
+
+                    </div>
+                  )
+                }
+                {hoveredIndex2 === index && product.name === "" && product.headline && (
                   <div
-                    className="hover-box absolute  p-3 w-[15rem] bg-black h-auto rounded-md border-[0.03rem]   border-[#444D61] "
+                    className="hover-box absolute  py-3 px-4 w-[15rem] bg-black h-auto rounded-2xl border-[0.03rem]   border-[#444D61] "
                     style={{
                       top: `calc(25% + ${hoverY}px)`,
                       left: `calc(50% + ${hoverX}px)`,
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
-                        <h4 className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide mb-1">{product.headline}</h4>
-                        <p className='text-white font-RobotoRegular text-[0.675rem]'>{product.content}</p>
+                    <h4 className="text-[#1B99D4] text-xs font-RobotoBold tracking-wide mb-1">{product.headline}</h4>
+                    <p className='text-white font-RobotoRegular text-[0.675rem]'>{product.content}</p>
                   </div>
                 )}
               </div>
