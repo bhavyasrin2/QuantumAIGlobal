@@ -131,7 +131,7 @@ export default function Productspicture() {
                 }
                 {hoveredIndex1 === index && product.name === "" && product.headline && (
                   <div
-                    className="hover-box absolute w-[15rem] py-3 px-4  bg-black h-auto rounded-2xl border-[0.03rem]   border-[#444D61] "
+                    className="hover-box absolute w-[20rem] py-3 px-4  bg-black h-auto rounded-2xl border-[0.03rem]   border-[#444D61] "
                     style={{
                       top: `calc(25% + ${hoverY}px)`,
                       left: `calc(50% + ${hoverX}px)`,
@@ -201,7 +201,7 @@ export default function Productspicture() {
                 }
                 {hoveredIndex2 === index && product.name === "" && product.headline && (
                   <div
-                    className="hover-box absolute  py-3 px-4 w-[15rem] bg-black h-auto rounded-2xl border-[0.03rem]   border-[#444D61] "
+                    className="hover-box absolute  py-3 px-4 w-[20rem] bg-black h-auto rounded-2xl border-[0.03rem]   border-[#444D61] "
                     style={{
                       top: `calc(25% + ${hoverY}px)`,
                       left: `calc(50% + ${hoverX}px)`,
