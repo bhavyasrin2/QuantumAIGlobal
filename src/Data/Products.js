@@ -25,8 +25,8 @@ export const quantumProducts = [
       title: "QMemory",
       name: "", 
       image: require("../../src/Images/Q MEMORY LOGO.png"),
-       headline: "",
-      content: ""
+       headline: "Rb based warm vapor cell.",
+      content: "To develop Room temperature warm Rb vapor-based Quantum Memory at Single photon level.Quantum Memory is the key building block of Quantum Repeaters that is required to share the Quantum entanglement at large distances"
   },
   { 
       title: "Q-Folio Pro",
@@ -39,8 +39,8 @@ export const quantumProducts = [
       title: "EPS-QKD",
       name: "", 
       image: require("../../src/Images/QKD LOGO.png"),
-       headline: "",
-      content: ""
+       headline: "Quantum Key Distribution",
+      content: "Quantum Key Distribution demonstration toolkit using Entangled photon source for academic exploration and benchmarking of entanglement based experiments."
   },
   { 
       title: "QubitIQ",
